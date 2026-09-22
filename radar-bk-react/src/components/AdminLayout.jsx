@@ -9,6 +9,7 @@ const NAV = [
   { to: '/sosiometri', label: 'Sosiometri' },
   { to: '/data', label: 'Data' },
   { to: '/tanya', label: 'Tanya' },
+  { to: '/prospek', label: 'Prospek' },
 ]
 
 export default function AdminLayout({ children }) {

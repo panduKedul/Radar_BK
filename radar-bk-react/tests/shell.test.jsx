@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import App from '../src/App.jsx'
 
-test('sidebar tampil 7 nav + footer formal', () => {
+test('sidebar tampil 8 nav + footer formal', () => {
   render(
     <MemoryRouter>
       <App />
@@ -11,5 +11,5 @@ test('sidebar tampil 7 nav + footer formal', () => {
   expect(screen.getAllByText(/RADAR BK/).length).toBeGreaterThanOrEqual(1)
   expect(screen.getByText(/Pandu/)).toBeTruthy()
   const nav = screen.getByLabelText(/Navigasi utama/)
-  expect(nav.children.length).toBe(7)
+  expect(nav.children.length).toBe(8)
 })

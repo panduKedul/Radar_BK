@@ -39,6 +39,9 @@ export default function Siswa() {
       <div className="mt-4">
         <StudentLine student={s} labels={s.kelas_labels || []} />
       </div>
+      <Link to="/prospek" className="mt-4 inline-block rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700">
+        Lihat prospek studi →
+      </Link>
     </div>
   )
 }

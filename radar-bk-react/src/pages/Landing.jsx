@@ -33,6 +33,11 @@ const CARDS = [
     bg: 'bg-violet-50', ring: 'hover:ring-violet-300', iconBg: 'bg-violet-500',
     icon: (<path d="M8 10h8M8 14h5M21 12a9 9 0 01-13.2 7.9L3 21l1.1-4.8A9 9 0 1121 12z" />),
   },
+  {
+    to: '/prospek', label: 'Prospek', desc: 'Arah studi: lokal, LN, vokasi, kedinasan',
+    bg: 'bg-orange-50', ring: 'hover:ring-orange-300', iconBg: 'bg-orange-500',
+    icon: (<path d="M12 14l9-5-9-5-9 5 9 5zm0 0v6" />),
+  },
 ]
 
 export default function Landing() {

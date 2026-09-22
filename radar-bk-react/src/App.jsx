@@ -8,6 +8,7 @@ import Kasus from './pages/Kasus.jsx'
 import Sosiometri from './pages/Sosiometri.jsx'
 import DataPage from './pages/DataPage.jsx'
 import Tanya from './pages/Tanya.jsx'
+import Prospek from './pages/Prospek.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 export const routes = [
@@ -19,6 +20,7 @@ export const routes = [
   { path: '/sosiometri', label: 'Sosiometri' },
   { path: '/data', label: 'Data' },
   { path: '/tanya', label: 'Tanya' },
+  { path: '/prospek', label: 'Prospek' },
 ]
 
 export default function App() {
@@ -33,6 +35,7 @@ export default function App() {
         <Route path="/sosiometri" element={<Sosiometri />} />
         <Route path="/data" element={<DataPage />} />
         <Route path="/tanya" element={<Tanya />} />
+        <Route path="/prospek" element={<Prospek />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AdminLayout>

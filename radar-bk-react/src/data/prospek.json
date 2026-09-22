@@ -1,0 +1,63 @@
+{
+  "kurasi": "2026-09",
+  "sumber": "QS WUR 2026, LPDP 2026, Kemenkeu, Kemdiktisaintek",
+  "kategori": [
+    {
+      "id": "lokal",
+      "nama": "Universitas Lokal",
+      "deskripsi": "PTN/PTS dalam negeri — jalur SNBP, SNBT, mandiri. Cocok semua profil; PTN top butuh rata tinggi.",
+      "items": [
+        { "nama": "Universitas Indonesia (UI)", "fokus": "Umum — kuat semua rumpun", "info": "QS 2026 #1 Indonesia", "link": "https://www.ui.ac.id" },
+        { "nama": "Universitas Gadjah Mada (UGM)", "fokus": "Umum — teknik, hukum, ekonomi kuat", "info": "QS 2026 #2 Indonesia", "link": "https://www.ugm.ac.id" },
+        { "nama": "Institut Teknologi Bandung (ITB)", "fokus": "Teknik & sains", "info": "QS 2026 #3 Indonesia", "link": "https://www.itb.ac.id" },
+        { "nama": "Universitas Airlangga (UNAIR)", "fokus": "Kesehatan, hukum, ekonomi", "info": "QS 2026 #4 Indonesia", "link": "https://www.unair.ac.id" },
+        { "nama": "IPB University", "fokus": "Pertanian, pangan, veteriner", "info": "QS 2026 #5 Indonesia", "link": "https://www.ipb.ac.id" },
+        { "nama": "ITS Surabaya", "fokus": "Teknik, maritim, informatika", "info": "TeknikTop Indonesia", "link": "https://www.its.ac.id" },
+        { "nama": "Universitas Diponegoro (UNDIP)", "fokus": "Umum — hukum, teknik, kesehatan", "info": "PTN favorit Jateng", "link": "https://www.undip.ac.id" },
+        { "nama": "Universitas Padjadjaran (UNPAD)", "fokus": "Hukum, komunikasi, ekonomi", "info": "PTN favorit Jabar", "link": "https://www.unpad.ac.id" },
+        { "nama": "Binus University", "fokus": "Informatika, desain, bisnis", "info": "PTS global", "link": "https://binus.ac.id" },
+        { "nama": "Universitas Telkom", "fokus": "Telekomunikasi, informatika", "info": "PTS teknik", "link": "https://telkomuniversity.ac.id" }
+      ]
+    },
+    {
+      "id": "internasional",
+      "nama": "Studi Internasional",
+      "deskripsi": "Beasiswa luar negeri — butuh akademik kuat + bahasa Inggris. Siapkan sejak dini.",
+      "items": [
+        { "nama": "LPDP (dalam & luar negeri)", "fokus": "S2/S3 — STEM & SHARE 2026", "info": "lpdp.kemenkeu.go.id", "link": "https://lpdp.kemenkeu.go.id" },
+        { "nama": "MEXT (Jepang)", "fokus": "S1/S2 — semua bidang", "info": "Kedubes Jepang", "link": "https://www.id.emb-japan.go.jp" },
+        { "nama": "Australia Awards (AAS)", "fokus": "S1/S2 — prioritas pembangunan", "info": "australiaawardsindonesia.org", "link": "https://www.australiaawardsindonesia.org" },
+        { "nama": "DAAD (Jerman)", "fokus": "Teknik & sains", "info": "daad.id", "link": "https://www.daad.id" },
+        { "nama": "KGSP/GKS (Korea Selatan)", "fokus": "S1/S2 — semua bidang", "info": "studyinkorea.go.kr", "link": "https://www.studyinkorea.go.kr" },
+        { "nama": "Fulbright (Amerika Serikat)", "fokus": "S2 — semua bidang", "info": "aminef.or.id", "link": "https://www.aminef.or.id" }
+      ]
+    },
+    {
+      "id": "vokasi",
+      "nama": "Pelatihan Vokasi",
+      "deskripsi": "Politeknik & vokasi — lulus siap kerja, porsi praktik besar. Cocok profil praktik kuat.",
+      "items": [
+        { "nama": "Politeknik Negeri Jakarta (PNJ)", "fokus": "Teknik elektro, mesin, TIK", "info": "pnj.ac.id", "link": "https://www.pnj.ac.id" },
+        { "nama": "Politeknik Negeri Bandung (Polban)", "fokus": "Teknik, akuntansi, bisnis", "info": "polban.ac.id", "link": "https://www.polban.ac.id" },
+        { "nama": "PENS Surabaya", "fokus": "Elektronika, informatika, robotika", "info": "pens.ac.id", "link": "https://www.pens.ac.id" },
+        { "nama": "Politeknik Negeri Semarang (Polines)", "fokus": "Teknik, akuntansi", "info": "polines.ac.id", "link": "https://www.polines.ac.id" },
+        { "nama": "Politeknik Negeri Malang (Polinema)", "fokus": "Teknik, TI, bisnis", "info": "polinema.ac.id", "link": "https://www.polinema.ac.id" },
+        { "nama": "ATMI Cikarang / Politeknik Manufaktur", "fokus": "Manufaktur & mekatronika", "info": "Ikatan industri", "link": "https://www.atmi.ac.id" }
+      ]
+    },
+    {
+      "id": "kedinasan",
+      "nama": "Sekolah Kedinasan",
+      "deskripsi": "Ikatan dinas — kuliah + peluang CPNS. Seleksi ketat + syarat disiplin & kesehatan.",
+      "items": [
+        { "nama": "PKN STAN", "fokus": "Keuangan negara — Kemenkeu", "info": "pknstan.ac.id", "link": "https://www.pknstan.ac.id" },
+        { "nama": "IPDN", "fokus": "Pemerintahan dalam negeri", "info": "ipdn.ac.id", "link": "https://www.ipdn.ac.id" },
+        { "nama": "STIS (Polstat STIS)", "fokus": "Statistika — BPS", "info": "stis.ac.id", "link": "https://www.stis.ac.id" },
+        { "nama": "STMKG", "fokus": "Meteorologi & geofisika — BMKG", "info": "stmkg.ac.id", "link": "https://www.stmkg.ac.id" },
+        { "nama": "STIN (BIN)", "fokus": "Intelijen negara", "info": "Seleksi khusus", "link": "https://www.bin.go.id" },
+        { "nama": "Akpol / Akmil", "fokus": "Kepolisian / TNI AD", "info": "Syarat fisik ketat", "link": "https://www.polri.go.id" },
+        { "nama": "Poltek SSN", "fokus": "Siber & sandi negara", "info": "poltekssn.ac.id", "link": "https://www.poltekssn.ac.id" }
+      ]
+    }
+  ]
+}
