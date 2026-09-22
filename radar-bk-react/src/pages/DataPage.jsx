@@ -12,9 +12,22 @@ import {
 } from '../lib/xlsx-validate.js'
 import UploadBox from '../components/UploadBox.jsx'
 
+const ADMIN_PASSWORD = 'admin123'
+const AUTH_KEY = 'radar-bk-data-auth'
+
+function isAuthed() {
+  try {
+    return sessionStorage.getItem(AUTH_KEY) === '1'
+  } catch {
+    return false
+  }
+}
+
 export default function DataPage() {
   const [lib, setLib] = useState(loadDatasets)
   const [errors, setErrors] = useState([])
+  const [pendingDelete, setPendingDelete] = useState(null)
+  const [pw, setPw] = useState('')
 
   const files = [SEED_NAME, ...Object.keys(lib.files)]
   const active = lib.active || SEED_NAME
@@ -58,10 +71,35 @@ export default function DataPage() {
       setErrors(["Aktifkan dataset lain dulu sebelum hapus '" + name + "'."])
       return
     }
+    if (!isAuthed()) {
+      setPendingDelete(name)
+      setPw('')
+      setErrors([])
+      return
+    }
+    doDelete(name)
+  }
+
+  function doDelete(name) {
     const nextFiles = { ...lib.files }
     delete nextFiles[name]
     persist(active, nextFiles)
     setErrors([])
+  }
+
+  function confirmPassword(e) {
+    e.preventDefault()
+    if (pw === ADMIN_PASSWORD) {
+      try {
+        sessionStorage.setItem(AUTH_KEY, '1')
+      } catch { /* abaikan */ }
+      const name = pendingDelete
+      setPendingDelete(null)
+      setPw('')
+      if (name) doDelete(name)
+    } else {
+      setErrors(['Password salah.'])
+    }
   }
 
   return (
@@ -92,6 +130,40 @@ export default function DataPage() {
           Unduh template
         </button>
       </div>
+      {pendingDelete && (
+        <form
+          onSubmit={confirmPassword}
+          className="mb-3 rounded-lg bg-amber-50 p-3 text-sm shadow"
+        >
+          <p className="mb-2 font-semibold">
+            Hapus “{pendingDelete}” butuh password admin:
+          </p>
+          <div className="flex gap-2">
+            <input
+              type="password"
+              value={pw}
+              onChange={(e) => setPw(e.target.value)}
+              placeholder="Password admin…"
+              aria-label="Password admin"
+              autoFocus
+              className="flex-1 rounded-lg border border-gray-300 bg-white px-3 py-1.5 focus:outline-indigo-600"
+            />
+            <button
+              type="submit"
+              className="rounded bg-red-600 px-3 py-1.5 font-semibold text-white hover:bg-red-700"
+            >
+              Hapus
+            </button>
+            <button
+              type="button"
+              onClick={() => setPendingDelete(null)}
+              className="rounded border border-gray-300 bg-white px-3 py-1.5 hover:bg-gray-100"
+            >
+              Batal
+            </button>
+          </div>
+        </form>
+      )}
       <div className="overflow-x-auto rounded-lg bg-white shadow">
         <table className="min-w-full text-sm">
           <thead className="bg-gray-100 text-left">
