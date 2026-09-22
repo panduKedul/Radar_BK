@@ -1,0 +1,12 @@
+[build]
+  base = "radar-bk-react"
+  command = "npm run build"
+  publish = "radar-bk-react/dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
