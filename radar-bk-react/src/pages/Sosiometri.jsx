@@ -14,7 +14,7 @@ export default function Sosiometri() {
 
   const names = useMemo(() => Object.fromEntries(students.map((s) => [s.id, s.nama])), [students])
 
-  const { top5, terisol } = useMemo(() => {
+  const { top5, bottom5, terisol } = useMemo(() => {
     const counts = {}
     Object.values(state.sosio).forEach((arr) => (arr || []).forEach((id) => {
       counts[id] = (counts[id] || 0) + 1
@@ -22,8 +22,11 @@ export default function Sosiometri() {
     const top5 = Object.entries(counts)
       .sort((a, b) => b[1] - a[1])
       .slice(0, 5)
+    const bottom5 = Object.entries(counts)
+      .sort((a, b) => a[1] - b[1])
+      .slice(0, 5)
     const terisol = students.map((s) => s.id).filter((id) => !counts[id])
-    return { top5, terisol }
+    return { top5, bottom5, terisol }
   }, [state.sosio, students])
 
   function handleSave(id, teman) {
@@ -57,6 +60,20 @@ export default function Sosiometri() {
             ) : (
               <ol className="list-decimal pl-5 text-sm">
                 {top5.map(([id, n]) => (
+                  <li key={id}>
+                    {names[id] || id} — {n} suara
+                  </li>
+                ))}
+              </ol>
+            )}
+          </div>
+          <div className="rounded-lg bg-white p-4 shadow">
+            <h2 className="mb-2 font-semibold">Top 5 paling jarang dipilih</h2>
+            {bottom5.length === 0 ? (
+              <p className="text-sm text-gray-500">Belum ada data.</p>
+            ) : (
+              <ol className="list-decimal pl-5 text-sm">
+                {bottom5.map(([id, n]) => (
                   <li key={id}>
                     {names[id] || id} — {n} suara
                   </li>
