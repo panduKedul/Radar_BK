@@ -42,7 +42,19 @@ export default function Kasus() {
                 <td className="p-2">
                   <Badge label={r.risk.badge} />
                 </td>
-                <td className="p-2">{r.risk.skor}</td>
+                <td
+                  className="p-2 font-bold"
+                  style={{
+                    color:
+                      r.risk.badge === 'Intervensi'
+                        ? '#dc2626'
+                        : r.risk.badge === 'Pantau'
+                          ? '#d97706'
+                          : '#059669',
+                  }}
+                >
+                  {r.risk.skor}
+                </td>
                 <td className="p-2">
                   <select
                     aria-label={`Status ${r.nama}`}
