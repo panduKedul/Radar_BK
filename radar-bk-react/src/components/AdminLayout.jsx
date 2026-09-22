@@ -21,7 +21,7 @@ export default function AdminLayout({ children }) {
   return (
     <div className="flex min-h-screen bg-[#f3f4f6]">
       {/* Sidebar desktop */}
-      <aside className="w-60 shrink-0 bg-[#1e2a3a] text-white p-4 hidden md:flex md:flex-col">
+      <aside className="w-60 shrink-0 bg-[#1e2a3a] text-white p-4 hidden md:flex md:flex-col sticky top-0 h-screen overflow-y-auto">
         <div className="text-xl font-bold tracking-wide">RADAR BK</div>
         <p className="text-xs text-slate-300 mb-4">Sinyal dini siswa, cepat tanggap BK</p>
         <nav className="flex flex-col gap-1" aria-label="Navigasi utama">
@@ -62,7 +62,7 @@ export default function AdminLayout({ children }) {
         {/* Nav HP dropdown */}
         {open && (
           <nav
-            className="md:hidden bg-[#1e2a3a] text-white px-4 pb-3 flex flex-col gap-1"
+            className="md:hidden bg-[#1e2a3a] text-white px-4 pb-3 flex flex-col gap-1 sticky top-[57px] z-10 max-h-[60vh] overflow-y-auto"
             aria-label="Navigasi seluler"
           >
             {NAV.map((n) => (
@@ -82,7 +82,7 @@ export default function AdminLayout({ children }) {
 
         <main className="flex-1 p-4">{children}</main>
 
-        <footer className="sticky bottom-0 bg-[#1e2a3a] text-white text-center text-sm p-3">
+        <footer className="bg-[#1e2a3a] text-white text-center text-sm p-3">
           Muhammad Pandu Wirakusuma · Telkom University Jakarta · © 2026
         </footer>
       </div>
