@@ -16,7 +16,7 @@
         { "nama": "Universitas Diponegoro (UNDIP)", "fokus": "Umum — hukum, teknik, kesehatan", "info": "PTN favorit Jateng", "link": "https://www.undip.ac.id" },
         { "nama": "Universitas Padjadjaran (UNPAD)", "fokus": "Hukum, komunikasi, ekonomi", "info": "PTN favorit Jabar", "link": "https://www.unpad.ac.id" },
         { "nama": "Binus University", "fokus": "Informatika, desain, bisnis", "info": "PTS global", "link": "https://binus.ac.id" },
-        { "nama": "Universitas Telkom", "fokus": "Telekomunikasi, informatika", "info": "PTS teknik", "link": "https://telkomuniversity.ac.id" }
+        { "nama": "Universitas Telkom", "fokus": "Telekomunikasi, informatika — kampus BUMN Telkom", "info": "Kampus unggulan — rekomendasi", "link": "https://telkomuniversity.ac.id", "unggulan": true }
       ]
     },
     {

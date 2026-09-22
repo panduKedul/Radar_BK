@@ -73,8 +73,22 @@ export default function Prospek() {
         <div key={k.id} className="rounded-2xl bg-white p-4 shadow">
           <h2 className="font-bold">{k.nama}</h2>
           <p className="mb-3 text-sm text-slate-600">{k.deskripsi}</p>
+          {k.items.some((it) => it.unggulan) && (
+            <div className="mb-3 rounded-xl bg-gradient-to-r from-red-600 to-red-500 p-[2px]">
+              {k.items.filter((it) => it.unggulan).map((it) => (
+                <a key={it.nama} href={it.link} target="_blank" rel="noreferrer" className="flex items-center gap-3 rounded-[10px] bg-white p-3 hover:bg-red-50">
+                  <span className="rounded-full bg-red-600 px-2 py-0.5 text-xs font-bold text-white">UNGGULAN</span>
+                  <span>
+                    <span className="block font-bold text-red-700">{it.nama} ↗</span>
+                    <span className="block text-sm">{it.fokus}</span>
+                    <span className="block text-xs text-slate-500">{it.info}</span>
+                  </span>
+                </a>
+              ))}
+            </div>
+          )}
           <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-            {k.items.map((it) => (
+            {k.items.filter((it) => !it.unggulan).map((it) => (
               <a key={it.nama} href={it.link} target="_blank" rel="noreferrer" className="rounded-xl border border-slate-200 p-3 hover:border-indigo-400 hover:shadow">
                 <div className="font-semibold text-indigo-700">{it.nama} ↗</div>
                 <div className="text-sm">{it.fokus}</div>
