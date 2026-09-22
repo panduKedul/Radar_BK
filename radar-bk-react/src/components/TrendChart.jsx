@@ -98,15 +98,16 @@ export function BarTrend({ students }) {
 
 export function ClassLine({ students, labels }) {
   const ref = useRef(null)
+  const [tip, setTip] = useState(null)
+  const avg = (key, i) => {
+    const vals = students.map((s) => (s[key] || [])[i]).filter((v) => v != null)
+    return vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : 0
+  }
   useEffect(() => {
     const got = setupCanvas(ref, 360)
     if (!got) return
     const { ctx, W, H } = got
     const pad = { l: 44, r: 12, t: 16, b: 36 }
-    const avg = (key, i) => {
-      const vals = students.map((s) => (s[key] || [])[i]).filter((v) => v != null)
-      return vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : 0
-    }
     const X = (i) => pad.l + (i * (W - pad.l - pad.r)) / Math.max(labels.length - 1, 1)
     const Y = (v) => pad.t + (1 - (v - 60) / 40) * (H - pad.t - pad.b)
     ctx.font = '12px system-ui'
@@ -128,16 +129,40 @@ export function ClassLine({ students, labels }) {
         ctx.beginPath(); ctx.arc(X(i), Y(v), 5, 0, Math.PI * 2); ctx.fill()
         ctx.fillStyle = '#fff'
         ctx.beginPath(); ctx.arc(X(i), Y(v), 2, 0, Math.PI * 2); ctx.fill()
-        ctx.fillStyle = '#334155'
-        ctx.fillText(v.toFixed(1), X(i) - 12, Y(v) - 10)
       })
     })
+    ref.current._xs = labels.map((_, i) => X(i))
   }, [students, labels])
+
+  const onMove = (e) => {
+    const canvas = ref.current
+    if (!canvas || !canvas._xs) return
+    const rect = canvas.getBoundingClientRect()
+    const mx = e.clientX - rect.left
+    let best = 0
+    canvas._xs.forEach((x, i) => { if (Math.abs(x - mx) < Math.abs(canvas._xs[best] - mx)) best = i })
+    if (Math.abs(canvas._xs[best] - mx) < 40) {
+      setTip({
+        x: canvas._xs[best],
+        label: labels[best],
+        vals: LINE_SERIES.map((sr) => ({ ...sr, v: avg(sr.key, best) })),
+      })
+    } else setTip(null)
+  }
+
   return (
-    <div className="rounded-2xl bg-white p-4 shadow">
+    <div className="relative rounded-2xl bg-white p-4 shadow">
       <h2 className="mb-1 text-lg font-bold">Tren Rata Kelas K1 → K5</h2>
-      <p className="mb-2 text-sm text-slate-500">Rata-rata seluruh siswa per mapel tiap tingkat.</p>
-      <canvas ref={ref} className="w-full" aria-label="Garis tren rata kelas" />
+      <p className="mb-2 text-sm text-slate-500">Rata-rata seluruh siswa per mapel tiap tingkat. Arahkan kursor ke titik untuk angka.</p>
+      <canvas ref={ref} className="w-full cursor-crosshair" onMouseMove={onMove} onMouseLeave={() => setTip(null)} aria-label="Garis tren rata kelas" />
+      {tip && (
+        <div className="pointer-events-none absolute rounded-lg bg-slate-900 px-3 py-2 text-xs text-white shadow-lg" style={{ left: Math.min(tip.x + 12, 220), top: 60 }}>
+          <div className="mb-1 font-bold">{tip.label}</div>
+          {tip.vals.map((s) => (
+            <div key={s.key}><i className="mr-1 inline-block h-2 w-2 rounded-full" style={{ background: s.color }} />{s.label}: {s.v.toFixed(1)}</div>
+          ))}
+        </div>
+      )}
       <div className="mt-2 flex gap-4 text-xs text-slate-600">
         {LINE_SERIES.map((s) => (
           <span key={s.key}><i className="mr-1 inline-block h-3 w-3 rounded-full" style={{ background: s.color }} />{s.label}</span>
@@ -149,6 +174,7 @@ export function ClassLine({ students, labels }) {
 
 export function StudentLine({ student, labels }) {
   const ref = useRef(null)
+  const [tip, setTip] = useState(null)
   const series = [
     { label: 'IPAS', color: '#4f46e5', arr: student.ip_k || [] },
     { label: 'B. Indonesia', color: '#059669', arr: student.bi_k || [] },
@@ -186,16 +212,40 @@ export function StudentLine({ student, labels }) {
         ctx.beginPath(); ctx.arc(X(i), Y(v), 5, 0, Math.PI * 2); ctx.fill()
         ctx.fillStyle = '#fff'
         ctx.beginPath(); ctx.arc(X(i), Y(v), 2, 0, Math.PI * 2); ctx.fill()
-        ctx.fillStyle = '#334155'
-        ctx.fillText(v, X(i) - 10, Y(v) - 10)
       })
     })
+    ref.current._xs = labels.map((_, i) => X(i))
   }, [student, labels])
+
+  const onMove = (e) => {
+    const canvas = ref.current
+    if (!canvas || !canvas._xs) return
+    const rect = canvas.getBoundingClientRect()
+    const mx = e.clientX - rect.left
+    let best = 0
+    canvas._xs.forEach((x, i) => { if (Math.abs(x - mx) < Math.abs(canvas._xs[best] - mx)) best = i })
+    if (Math.abs(canvas._xs[best] - mx) < 40) {
+      setTip({
+        x: canvas._xs[best],
+        label: labels[best],
+        vals: series.map((sr) => ({ ...sr, v: sr.arr[best] })),
+      })
+    } else setTip(null)
+  }
+
   return (
-    <div className="rounded-xl bg-white p-4 shadow">
+    <div className="relative rounded-xl bg-white p-4 shadow">
       <h2 className="mb-1 font-semibold">Grafik Nilai {student.nama}</h2>
-      <p className="mb-2 text-sm text-slate-500">Per mapel tiap tingkat — naik/turun kelihatan langsung.</p>
-      <canvas ref={ref} className="w-full" aria-label={`Grafik nilai ${student.nama}`} />
+      <p className="mb-2 text-sm text-slate-500">Per mapel tiap tingkat — arahkan kursor ke titik untuk angka.</p>
+      <canvas ref={ref} className="w-full cursor-crosshair" onMouseMove={onMove} onMouseLeave={() => setTip(null)} aria-label={`Grafik nilai ${student.nama}`} />
+      {tip && (
+        <div className="pointer-events-none absolute rounded-lg bg-slate-900 px-3 py-2 text-xs text-white shadow-lg" style={{ left: Math.min(tip.x + 12, 220), top: 50 }}>
+          <div className="mb-1 font-bold">{tip.label}</div>
+          {tip.vals.map((s) => (
+            <div key={s.label}><i className="mr-1 inline-block h-2 w-2 rounded-full" style={{ background: s.color }} />{s.label}: {s.v ?? '-'}</div>
+          ))}
+        </div>
+      )}
       <div className="mt-2 flex gap-4 text-xs text-slate-600">
         {series.map((s) => (
           <span key={s.label}><i className="mr-1 inline-block h-3 w-3 rounded-full" style={{ background: s.color }} />{s.label}</span>
