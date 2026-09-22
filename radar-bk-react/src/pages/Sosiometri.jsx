@@ -54,7 +54,7 @@ export default function Sosiometri() {
         />
         <div className="space-y-4">
           <div className="rounded-lg bg-white p-4 shadow">
-            <h2 className="mb-2 font-semibold">Top 5 paling dipilih</h2>
+            <h2 className="mb-2 font-semibold">Top 5 paling sering dipilih</h2>
             {top5.length === 0 ? (
               <p className="text-sm text-gray-500">Belum ada data.</p>
             ) : (
