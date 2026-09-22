@@ -37,7 +37,7 @@ export function BarTrend({ students }) {
     const got = setupCanvas(ref, 420)
     if (!got) return
     const { ctx, W, H } = got
-    const pad = { l: 44, r: 12, t: 16, b: 110 }
+    const pad = { l: 44, r: 12, t: 16, b: 28 }
     const max = 100
     const X = (i) => pad.l + (i + 0.5) * ((W - pad.l - pad.r) / rows.length)
     const bw = Math.max(((W - pad.l - pad.r) / rows.length) * 0.62, 4)
@@ -62,13 +62,6 @@ export function BarTrend({ students }) {
       ctx.fill()
       ctx.fillStyle = '#334155'
       ctx.fillText(r.rata == null ? '-' : Number(r.rata).toFixed(1), X(i) - 10, Y(r.rata) - 6)
-      ctx.save()
-      ctx.translate(X(i), H - 8)
-      ctx.rotate(-Math.PI / 4)
-      ctx.textAlign = 'right'
-      ctx.fillText(r.nama.length > 14 ? r.nama.slice(0, 13) + '…' : r.nama, 0, 0)
-      ctx.restore()
-      ctx.textAlign = 'left'
     })
     ref.current._bars = rows.map((r, i) => ({ x: X(i), w: bw, r }))
   }, [students])
