@@ -40,6 +40,7 @@ export default function Prospek() {
               <th className="px-3 py-2">Rumpun Kuat</th>
               <th className="px-3 py-2">Badge</th>
               <th className="px-3 py-2">Jalur Rekomendasi</th>
+              <th className="px-3 py-2">Kampus Saran</th>
               <th className="px-3 py-2">Alasan</th>
             </tr>
           </thead>
@@ -58,6 +59,18 @@ export default function Prospek() {
                     {r.pros.jalur.map((j) => (
                       <span key={j} className={`rounded-full px-2 py-0.5 text-xs font-semibold ${JALUR_STYLE[j]}`}>
                         {JALUR_LABEL[j]}
+                      </span>
+                    ))}
+                  </span>
+                </td>
+                <td className="px-3 py-2">
+                  <span className="flex flex-wrap gap-1">
+                    {r.pros.kampus.map((k) => (
+                      <span
+                        key={k}
+                        className={`rounded px-1.5 py-0.5 text-xs ${k === 'Universitas Telkom' ? 'bg-red-600 font-bold text-white' : 'bg-slate-100 text-slate-700'}`}
+                      >
+                        {k}
                       </span>
                     ))}
                   </span>

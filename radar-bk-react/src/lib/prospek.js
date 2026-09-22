@@ -5,6 +5,14 @@ const RUMPUN = {
   mtk: 'Teknik, Informatika & Ekonomi',
 }
 
+const KAMPUS_RUMPUN = {
+  ipas: ['Universitas Indonesia (UI)', 'Universitas Airlangga (UNAIR)', 'IPB University'],
+  bind: ['Universitas Gadjah Mada (UGM)', 'Universitas Indonesia (UI)', 'Universitas Padjadjaran (UNPAD)'],
+  mtk: ['Institut Teknologi Bandung (ITB)', 'ITS Surabaya', 'Universitas Indonesia (UI)'],
+}
+
+const TELKOM = 'Universitas Telkom'
+
 export function rumpunTerkuat(s, akhir) {
   const kr = (s.kelas_rows || {})[s.kelas_akhir || akhir] || {}
   const cands = [
@@ -41,5 +49,10 @@ export function rekomendasiProspek(s, risk, akhir) {
   if (s.tren === 'Turun') {
     alasan.push('Tren turun — stabilkan nilai sebelum daftar seleksi ketat.')
   }
-  return { jalur: [...new Set(jalur)], rumpun: kuat.rumpun, mapelKuat: kuat.key, alasan }
+  const kampus = [...KAMPUS_RUMPUN[kuat.key]]
+  if (rata >= 80) {
+    kampus.unshift(TELKOM)
+    alasan.push('PTS unggulan Telkom University cocok — telekomunikasi & informatika kuat.')
+  }
+  return { jalur: [...new Set(jalur)], rumpun: kuat.rumpun, mapelKuat: kuat.key, alasan, kampus: [...new Set(kampus)].slice(0, 4), telkom: rata >= 80 }
 }

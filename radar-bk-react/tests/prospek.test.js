@@ -12,13 +12,15 @@ test('rata 95 Aman → internasional + lokal', () => {
   expect(r.jalur).toContain('internasional')
   expect(r.jalur).toContain('lokal')
   expect(r.mapelKuat).toBe('mtk')
+  expect(r.kampus[0]).toBe('Universitas Telkom')
 })
 
-test('rata 80 → vokasi + lokal', () => {
+test('rata 80 → vokasi + lokal, telkom ikut', () => {
   const s = mk(80, 85, 78, 80)
   const r = rekomendasiProspek(s, { badge: 'Pantau' }, 'Semester 5')
   expect(r.jalur).toContain('vokasi')
   expect(r.mapelKuat).toBe('bind')
+  expect(r.kampus).toContain('Universitas Telkom')
 })
 
 test('poin aktif → catatan disiplin', () => {
