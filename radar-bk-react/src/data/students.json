@@ -1,0 +1,1850 @@
+[
+  {
+    "id": "0145358555 / 2122005001020",
+    "nama": "ALYA ZHAFIRAH",
+    "kelas_rows": {
+      "Kelas 1": {
+        "ipas": 95.48,
+        "bind": 90.68,
+        "mtk": 90.84,
+        "absensi": 94.8,
+        "rata": 92.33,
+        "poin": 0
+      },
+      "Kelas 2": {
+        "ipas": 97.29,
+        "bind": 90.95,
+        "mtk": 91.47,
+        "absensi": 93.2,
+        "rata": 93.24,
+        "poin": 0
+      },
+      "Kelas 3": {
+        "ipas": 95.03,
+        "bind": 91.66,
+        "mtk": 91.96,
+        "absensi": 97.0,
+        "rata": 92.88,
+        "poin": 0
+      },
+      "Kelas 4": {
+        "ipas": 94.39,
+        "bind": 91.3,
+        "mtk": 90.19,
+        "absensi": 97.5,
+        "rata": 91.96,
+        "poin": 0
+      },
+      "Kelas 5": {
+        "ipas": 95,
+        "bind": 94,
+        "mtk": 93,
+        "absensi": 93.1,
+        "rata": 94,
+        "poin": 0
+      }
+    },
+    "ip_k": [
+      95.48,
+      97.29,
+      95.03,
+      94.39,
+      95
+    ],
+    "bi_k": [
+      90.68,
+      90.95,
+      91.66,
+      91.3,
+      94
+    ],
+    "mtk_k": [
+      90.84,
+      91.47,
+      91.96,
+      90.19,
+      93
+    ],
+    "rata_k5": 94,
+    "tren": "Naik",
+    "kelas_labels": [
+      "Kelas 1",
+      "Kelas 2",
+      "Kelas 3",
+      "Kelas 4",
+      "Kelas 5"
+    ],
+    "kelas_akhir": "Kelas 5"
+  },
+  {
+    "id": "0152845769 / 2324005003041",
+    "nama": "ASYIFA ADIA PUTRI",
+    "kelas_rows": {
+      "Kelas 1": {
+        "ipas": 92.95,
+        "bind": 93.01,
+        "mtk": 94.99,
+        "absensi": 94.5,
+        "rata": 93.65,
+        "poin": 0
+      },
+      "Kelas 2": {
+        "ipas": 95.46,
+        "bind": 93.63,
+        "mtk": 97.14,
+        "absensi": 97.4,
+        "rata": 95.41,
+        "poin": 0
+      },
+      "Kelas 3": {
+        "ipas": 98.76,
+        "bind": 92.78,
+        "mtk": 97.56,
+        "absensi": 97.8,
+        "rata": 96.37,
+        "poin": 0
+      },
+      "Kelas 4": {
+        "ipas": 99,
+        "bind": 93.32,
+        "mtk": 99,
+        "absensi": 91.3,
+        "rata": 97.11,
+        "poin": 0
+      },
+      "Kelas 5": {
+        "ipas": 95,
+        "bind": 95,
+        "mtk": 93,
+        "absensi": 94.0,
+        "rata": 94.33,
+        "poin": 0
+      }
+    },
+    "ip_k": [
+      92.95,
+      95.46,
+      98.76,
+      99,
+      95
+    ],
+    "bi_k": [
+      93.01,
+      93.63,
+      92.78,
+      93.32,
+      95
+    ],
+    "mtk_k": [
+      94.99,
+      97.14,
+      97.56,
+      99,
+      93
+    ],
+    "rata_k5": 94.33,
+    "tren": "Turun",
+    "kelas_labels": [
+      "Kelas 1",
+      "Kelas 2",
+      "Kelas 3",
+      "Kelas 4",
+      "Kelas 5"
+    ],
+    "kelas_akhir": "Kelas 5"
+  },
+  {
+    "id": "0146746464 / 2122005001021",
+    "nama": "DIMAS ZABDAN ABRIZAM",
+    "kelas_rows": {
+      "Kelas 1": {
+        "ipas": 90.63,
+        "bind": 89.32,
+        "mtk": 87.86,
+        "absensi": 94.9,
+        "rata": 89.27,
+        "poin": 0
+      },
+      "Kelas 2": {
+        "ipas": 91.99,
+        "bind": 90.53,
+        "mtk": 89.14,
+        "absensi": 93.4,
+        "rata": 90.55,
+        "poin": 0
+      },
+      "Kelas 3": {
+        "ipas": 92,
+        "bind": 88.74,
+        "mtk": 88.84,
+        "absensi": 93.9,
+        "rata": 89.86,
+        "poin": 5
+      },
+      "Kelas 4": {
+        "ipas": 93.51,
+        "bind": 86.78,
+        "mtk": 87.43,
+        "absensi": 96.8,
+        "rata": 89.24,
+        "poin": 0
+      },
+      "Kelas 5": {
+        "ipas": 93,
+        "bind": 92.11,
+        "mtk": 90,
+        "absensi": 97.8,
+        "rata": 91.7,
+        "poin": 0
+      }
+    },
+    "ip_k": [
+      90.63,
+      91.99,
+      92,
+      93.51,
+      93
+    ],
+    "bi_k": [
+      89.32,
+      90.53,
+      88.74,
+      86.78,
+      92.11
+    ],
+    "mtk_k": [
+      87.86,
+      89.14,
+      88.84,
+      87.43,
+      90
+    ],
+    "rata_k5": 91.7,
+    "tren": "Naik",
+    "kelas_labels": [
+      "Kelas 1",
+      "Kelas 2",
+      "Kelas 3",
+      "Kelas 4",
+      "Kelas 5"
+    ],
+    "kelas_akhir": "Kelas 5"
+  },
+  {
+    "id": "3142893931 / 2425005004104",
+    "nama": "EMBUN RAINA ALLEA ADZKIA",
+    "kelas_rows": {
+      "Kelas 1": {
+        "ipas": 94.81,
+        "bind": 92.96,
+        "mtk": 98.26,
+        "absensi": 95.2,
+        "rata": 95.34,
+        "poin": 0
+      },
+      "Kelas 2": {
+        "ipas": 97.56,
+        "bind": 93.82,
+        "mtk": 95.76,
+        "absensi": 93.8,
+        "rata": 95.71,
+        "poin": 0
+      },
+      "Kelas 3": {
+        "ipas": 97.6,
+        "bind": 95.55,
+        "mtk": 95.19,
+        "absensi": 96.1,
+        "rata": 96.11,
+        "poin": 0
+      },
+      "Kelas 4": {
+        "ipas": 99,
+        "bind": 93.02,
+        "mtk": 95.14,
+        "absensi": 96.7,
+        "rata": 95.72,
+        "poin": 5
+      },
+      "Kelas 5": {
+        "ipas": 96,
+        "bind": 96,
+        "mtk": 95,
+        "absensi": 93.1,
+        "rata": 95.67,
+        "poin": 0
+      }
+    },
+    "ip_k": [
+      94.81,
+      97.56,
+      97.6,
+      99,
+      96
+    ],
+    "bi_k": [
+      92.96,
+      93.82,
+      95.55,
+      93.02,
+      96
+    ],
+    "mtk_k": [
+      98.26,
+      95.76,
+      95.19,
+      95.14,
+      95
+    ],
+    "rata_k5": 95.67,
+    "tren": "Turun",
+    "kelas_labels": [
+      "Kelas 1",
+      "Kelas 2",
+      "Kelas 3",
+      "Kelas 4",
+      "Kelas 5"
+    ],
+    "kelas_akhir": "Kelas 5"
+  },
+  {
+    "id": "3142974371 / 2122005001022",
+    "nama": "FATHAN ALMAYZA HAMIZAN",
+    "kelas_rows": {
+      "Kelas 1": {
+        "ipas": 98.76,
+        "bind": 97.72,
+        "mtk": 96.77,
+        "absensi": 96.9,
+        "rata": 97.75,
+        "poin": 5
+      },
+      "Kelas 2": {
+        "ipas": 99,
+        "bind": 94.79,
+        "mtk": 98.32,
+        "absensi": 97.1,
+        "rata": 97.37,
+        "poin": 0
+      },
+      "Kelas 3": {
+        "ipas": 97,
+        "bind": 95.78,
+        "mtk": 95.21,
+        "absensi": 95.0,
+        "rata": 96,
+        "poin": 0
+      },
+      "Kelas 4": {
+        "ipas": 99,
+        "bind": 98.41,
+        "mtk": 93.32,
+        "absensi": 94.8,
+        "rata": 96.91,
+        "poin": 0
+      },
+      "Kelas 5": {
+        "ipas": 98,
+        "bind": 97.05,
+        "mtk": 98,
+        "absensi": 98.4,
+        "rata": 97.68,
+        "poin": 5
+      }
+    },
+    "ip_k": [
+      98.76,
+      99,
+      97,
+      99,
+      98
+    ],
+    "bi_k": [
+      97.72,
+      94.79,
+      95.78,
+      98.41,
+      97.05
+    ],
+    "mtk_k": [
+      96.77,
+      98.32,
+      95.21,
+      93.32,
+      98
+    ],
+    "rata_k5": 97.68,
+    "tren": "Naik",
+    "kelas_labels": [
+      "Kelas 1",
+      "Kelas 2",
+      "Kelas 3",
+      "Kelas 4",
+      "Kelas 5"
+    ],
+    "kelas_akhir": "Kelas 5"
+  },
+  {
+    "id": "3143522935 / 2122005001023",
+    "nama": "FATIH RAHMAN HAKIM",
+    "kelas_rows": {
+      "Kelas 1": {
+        "ipas": 86.53,
+        "bind": 90.97,
+        "mtk": 85.68,
+        "absensi": 96.1,
+        "rata": 87.73,
+        "poin": 0
+      },
+      "Kelas 2": {
+        "ipas": 89.73,
+        "bind": 93.5,
+        "mtk": 88.61,
+        "absensi": 96.6,
+        "rata": 90.61,
+        "poin": 0
+      },
+      "Kelas 3": {
+        "ipas": 86.57,
+        "bind": 92.54,
+        "mtk": 92.49,
+        "absensi": 97.6,
+        "rata": 90.53,
+        "poin": 0
+      },
+      "Kelas 4": {
+        "ipas": 84.5,
+        "bind": 93.01,
+        "mtk": 89.12,
+        "absensi": 96.5,
+        "rata": 88.88,
+        "poin": 5
+      },
+      "Kelas 5": {
+        "ipas": 88.44,
+        "bind": 90,
+        "mtk": 85,
+        "absensi": 98.8,
+        "rata": 87.81,
+        "poin": 0
+      }
+    },
+    "ip_k": [
+      86.53,
+      89.73,
+      86.57,
+      84.5,
+      88.44
+    ],
+    "bi_k": [
+      90.97,
+      93.5,
+      92.54,
+      93.01,
+      90
+    ],
+    "mtk_k": [
+      85.68,
+      88.61,
+      92.49,
+      89.12,
+      85
+    ],
+    "rata_k5": 87.81,
+    "tren": "Turun",
+    "kelas_labels": [
+      "Kelas 1",
+      "Kelas 2",
+      "Kelas 3",
+      "Kelas 4",
+      "Kelas 5"
+    ],
+    "kelas_akhir": "Kelas 5"
+  },
+  {
+    "id": "0155353996 / 2122005001024",
+    "nama": "FHARENDRA ARFHA PRANAJA",
+    "kelas_rows": {
+      "Kelas 1": {
+        "ipas": 91.88,
+        "bind": 94.12,
+        "mtk": 95.55,
+        "absensi": 95.5,
+        "rata": 93.85,
+        "poin": 0
+      },
+      "Kelas 2": {
+        "ipas": 91.63,
+        "bind": 92.39,
+        "mtk": 95.83,
+        "absensi": 97.4,
+        "rata": 93.28,
+        "poin": 0
+      },
+      "Kelas 3": {
+        "ipas": 89.97,
+        "bind": 95.86,
+        "mtk": 97.03,
+        "absensi": 95.1,
+        "rata": 94.29,
+        "poin": 0
+      },
+      "Kelas 4": {
+        "ipas": 86.94,
+        "bind": 93.93,
+        "mtk": 95.73,
+        "absensi": 95.4,
+        "rata": 92.2,
+        "poin": 0
+      },
+      "Kelas 5": {
+        "ipas": 95,
+        "bind": 93,
+        "mtk": 92,
+        "absensi": 93.5,
+        "rata": 93.33,
+        "poin": 0
+      }
+    },
+    "ip_k": [
+      91.88,
+      91.63,
+      89.97,
+      86.94,
+      95
+    ],
+    "bi_k": [
+      94.12,
+      92.39,
+      95.86,
+      93.93,
+      93
+    ],
+    "mtk_k": [
+      95.55,
+      95.83,
+      97.03,
+      95.73,
+      92
+    ],
+    "rata_k5": 93.33,
+    "tren": "Naik",
+    "kelas_labels": [
+      "Kelas 1",
+      "Kelas 2",
+      "Kelas 3",
+      "Kelas 4",
+      "Kelas 5"
+    ],
+    "kelas_akhir": "Kelas 5"
+  },
+  {
+    "id": "3141891088 / 2122005001026",
+    "nama": "IHSAN TAUFIQ ROHMAN",
+    "kelas_rows": {
+      "Kelas 1": {
+        "ipas": 96.42,
+        "bind": 94.1,
+        "mtk": 98.2,
+        "absensi": 94.4,
+        "rata": 96.24,
+        "poin": 0
+      },
+      "Kelas 2": {
+        "ipas": 97.77,
+        "bind": 92.39,
+        "mtk": 95.63,
+        "absensi": 98.6,
+        "rata": 95.26,
+        "poin": 0
+      },
+      "Kelas 3": {
+        "ipas": 97.32,
+        "bind": 94.38,
+        "mtk": 98.09,
+        "absensi": 93.3,
+        "rata": 96.6,
+        "poin": 0
+      },
+      "Kelas 4": {
+        "ipas": 96.77,
+        "bind": 93.85,
+        "mtk": 97.83,
+        "absensi": 96.5,
+        "rata": 96.15,
+        "poin": 0
+      },
+      "Kelas 5": {
+        "ipas": 96,
+        "bind": 96,
+        "mtk": 95,
+        "absensi": 98.9,
+        "rata": 95.67,
+        "poin": 0
+      }
+    },
+    "ip_k": [
+      96.42,
+      97.77,
+      97.32,
+      96.77,
+      96
+    ],
+    "bi_k": [
+      94.1,
+      92.39,
+      94.38,
+      93.85,
+      96
+    ],
+    "mtk_k": [
+      98.2,
+      95.63,
+      98.09,
+      97.83,
+      95
+    ],
+    "rata_k5": 95.67,
+    "tren": "Turun",
+    "kelas_labels": [
+      "Kelas 1",
+      "Kelas 2",
+      "Kelas 3",
+      "Kelas 4",
+      "Kelas 5"
+    ],
+    "kelas_akhir": "Kelas 5"
+  },
+  {
+    "id": "3144228378 / 2122005001027",
+    "nama": "ILHAM ALFARIZQI",
+    "kelas_rows": {
+      "Kelas 1": {
+        "ipas": 93.82,
+        "bind": 93.88,
+        "mtk": 94.82,
+        "absensi": 95.1,
+        "rata": 94.17,
+        "poin": 0
+      },
+      "Kelas 2": {
+        "ipas": 91.73,
+        "bind": 91.98,
+        "mtk": 94.56,
+        "absensi": 98.2,
+        "rata": 92.76,
+        "poin": 0
+      },
+      "Kelas 3": {
+        "ipas": 93.79,
+        "bind": 94.47,
+        "mtk": 91.34,
+        "absensi": 96.6,
+        "rata": 93.2,
+        "poin": 0
+      },
+      "Kelas 4": {
+        "ipas": 89.91,
+        "bind": 91.62,
+        "mtk": 93.37,
+        "absensi": 92.8,
+        "rata": 91.63,
+        "poin": 0
+      },
+      "Kelas 5": {
+        "ipas": 95,
+        "bind": 95,
+        "mtk": 92,
+        "absensi": 95.4,
+        "rata": 94,
+        "poin": 5
+      }
+    },
+    "ip_k": [
+      93.82,
+      91.73,
+      93.79,
+      89.91,
+      95
+    ],
+    "bi_k": [
+      93.88,
+      91.98,
+      94.47,
+      91.62,
+      95
+    ],
+    "mtk_k": [
+      94.82,
+      94.56,
+      91.34,
+      93.37,
+      92
+    ],
+    "rata_k5": 94,
+    "tren": "Naik",
+    "kelas_labels": [
+      "Kelas 1",
+      "Kelas 2",
+      "Kelas 3",
+      "Kelas 4",
+      "Kelas 5"
+    ],
+    "kelas_akhir": "Kelas 5"
+  },
+  {
+    "id": "3147278635 / 2122005001028",
+    "nama": "IZZUL AKBAR AMRULOH",
+    "kelas_rows": {
+      "Kelas 1": {
+        "ipas": 99,
+        "bind": 94.65,
+        "mtk": 91.72,
+        "absensi": 95.5,
+        "rata": 95.12,
+        "poin": 0
+      },
+      "Kelas 2": {
+        "ipas": 98.96,
+        "bind": 94.19,
+        "mtk": 94.92,
+        "absensi": 99.0,
+        "rata": 96.02,
+        "poin": 0
+      },
+      "Kelas 3": {
+        "ipas": 99,
+        "bind": 91.77,
+        "mtk": 93.29,
+        "absensi": 98.8,
+        "rata": 94.69,
+        "poin": 0
+      },
+      "Kelas 4": {
+        "ipas": 99,
+        "bind": 93.51,
+        "mtk": 89.75,
+        "absensi": 95.4,
+        "rata": 94.09,
+        "poin": 0
+      },
+      "Kelas 5": {
+        "ipas": 97,
+        "bind": 97,
+        "mtk": 96.2,
+        "absensi": 98.0,
+        "rata": 96.73,
+        "poin": 0
+      }
+    },
+    "ip_k": [
+      99,
+      98.96,
+      99,
+      99,
+      97
+    ],
+    "bi_k": [
+      94.65,
+      94.19,
+      91.77,
+      93.51,
+      97
+    ],
+    "mtk_k": [
+      91.72,
+      94.92,
+      93.29,
+      89.75,
+      96.2
+    ],
+    "rata_k5": 96.73,
+    "tren": "Naik",
+    "kelas_labels": [
+      "Kelas 1",
+      "Kelas 2",
+      "Kelas 3",
+      "Kelas 4",
+      "Kelas 5"
+    ],
+    "kelas_akhir": "Kelas 5"
+  },
+  {
+    "id": "3153616634 / 2122005001029",
+    "nama": "JANISYA DWI ANGGRAINI",
+    "kelas_rows": {
+      "Kelas 1": {
+        "ipas": 99,
+        "bind": 94.06,
+        "mtk": 92.08,
+        "absensi": 97.7,
+        "rata": 95.05,
+        "poin": 0
+      },
+      "Kelas 2": {
+        "ipas": 96.78,
+        "bind": 96.4,
+        "mtk": 90.3,
+        "absensi": 96.6,
+        "rata": 94.49,
+        "poin": 0
+      },
+      "Kelas 3": {
+        "ipas": 95.92,
+        "bind": 96.99,
+        "mtk": 90.48,
+        "absensi": 98.5,
+        "rata": 94.46,
+        "poin": 0
+      },
+      "Kelas 4": {
+        "ipas": 97.65,
+        "bind": 95.16,
+        "mtk": 89.65,
+        "absensi": 96.0,
+        "rata": 94.15,
+        "poin": 0
+      },
+      "Kelas 5": {
+        "ipas": 97,
+        "bind": 97,
+        "mtk": 95,
+        "absensi": 94.2,
+        "rata": 96.33,
+        "poin": 0
+      }
+    },
+    "ip_k": [
+      99,
+      96.78,
+      95.92,
+      97.65,
+      97
+    ],
+    "bi_k": [
+      94.06,
+      96.4,
+      96.99,
+      95.16,
+      97
+    ],
+    "mtk_k": [
+      92.08,
+      90.3,
+      90.48,
+      89.65,
+      95
+    ],
+    "rata_k5": 96.33,
+    "tren": "Naik",
+    "kelas_labels": [
+      "Kelas 1",
+      "Kelas 2",
+      "Kelas 3",
+      "Kelas 4",
+      "Kelas 5"
+    ],
+    "kelas_akhir": "Kelas 5"
+  },
+  {
+    "id": "0141947853 / 2122005001030",
+    "nama": "JUAN RAHMA DIANSAH",
+    "kelas_rows": {
+      "Kelas 1": {
+        "ipas": 90.51,
+        "bind": 91.71,
+        "mtk": 97.99,
+        "absensi": 94.4,
+        "rata": 93.4,
+        "poin": 0
+      },
+      "Kelas 2": {
+        "ipas": 89.23,
+        "bind": 94.31,
+        "mtk": 99,
+        "absensi": 98.3,
+        "rata": 94.18,
+        "poin": 0
+      },
+      "Kelas 3": {
+        "ipas": 86.41,
+        "bind": 96.65,
+        "mtk": 99,
+        "absensi": 96.3,
+        "rata": 94.02,
+        "poin": 10
+      },
+      "Kelas 4": {
+        "ipas": 87.64,
+        "bind": 93.2,
+        "mtk": 99,
+        "absensi": 93.2,
+        "rata": 93.28,
+        "poin": 0
+      },
+      "Kelas 5": {
+        "ipas": 94,
+        "bind": 92,
+        "mtk": 94,
+        "absensi": 98.6,
+        "rata": 93.33,
+        "poin": 0
+      }
+    },
+    "ip_k": [
+      90.51,
+      89.23,
+      86.41,
+      87.64,
+      94
+    ],
+    "bi_k": [
+      91.71,
+      94.31,
+      96.65,
+      93.2,
+      92
+    ],
+    "mtk_k": [
+      97.99,
+      99,
+      99,
+      99,
+      94
+    ],
+    "rata_k5": 93.33,
+    "tren": "Naik",
+    "kelas_labels": [
+      "Kelas 1",
+      "Kelas 2",
+      "Kelas 3",
+      "Kelas 4",
+      "Kelas 5"
+    ],
+    "kelas_akhir": "Kelas 5"
+  },
+  {
+    "id": "3146692634 / 2122005001032",
+    "nama": "KEYSHA MEDINA PUTRI",
+    "kelas_rows": {
+      "Kelas 1": {
+        "ipas": 93.81,
+        "bind": 93.25,
+        "mtk": 95.2,
+        "absensi": 95.5,
+        "rata": 94.09,
+        "poin": 0
+      },
+      "Kelas 2": {
+        "ipas": 93.04,
+        "bind": 94.37,
+        "mtk": 97.67,
+        "absensi": 96.0,
+        "rata": 95.03,
+        "poin": 0
+      },
+      "Kelas 3": {
+        "ipas": 95.85,
+        "bind": 91.23,
+        "mtk": 98.74,
+        "absensi": 97.8,
+        "rata": 95.27,
+        "poin": 0
+      },
+      "Kelas 4": {
+        "ipas": 94.52,
+        "bind": 88.65,
+        "mtk": 99,
+        "absensi": 92.2,
+        "rata": 94.06,
+        "poin": 0
+      },
+      "Kelas 5": {
+        "ipas": 97,
+        "bind": 96,
+        "mtk": 95,
+        "absensi": 96.9,
+        "rata": 96,
+        "poin": 0
+      }
+    },
+    "ip_k": [
+      93.81,
+      93.04,
+      95.85,
+      94.52,
+      97
+    ],
+    "bi_k": [
+      93.25,
+      94.37,
+      91.23,
+      88.65,
+      96
+    ],
+    "mtk_k": [
+      95.2,
+      97.67,
+      98.74,
+      99,
+      95
+    ],
+    "rata_k5": 96,
+    "tren": "Naik",
+    "kelas_labels": [
+      "Kelas 1",
+      "Kelas 2",
+      "Kelas 3",
+      "Kelas 4",
+      "Kelas 5"
+    ],
+    "kelas_akhir": "Kelas 5"
+  },
+  {
+    "id": "3144673246 / 2122005001031",
+    "nama": "KHALISA NAURA ATHIFA",
+    "kelas_rows": {
+      "Kelas 1": {
+        "ipas": 90.78,
+        "bind": 96.12,
+        "mtk": 93.37,
+        "absensi": 97.0,
+        "rata": 93.42,
+        "poin": 0
+      },
+      "Kelas 2": {
+        "ipas": 91.57,
+        "bind": 94.01,
+        "mtk": 90.76,
+        "absensi": 94.8,
+        "rata": 92.11,
+        "poin": 0
+      },
+      "Kelas 3": {
+        "ipas": 93.54,
+        "bind": 96.53,
+        "mtk": 93.95,
+        "absensi": 93.5,
+        "rata": 94.67,
+        "poin": 0
+      },
+      "Kelas 4": {
+        "ipas": 90.36,
+        "bind": 98.49,
+        "mtk": 97.02,
+        "absensi": 94.0,
+        "rata": 95.29,
+        "poin": 0
+      },
+      "Kelas 5": {
+        "ipas": 94,
+        "bind": 93,
+        "mtk": 92,
+        "absensi": 93.1,
+        "rata": 93,
+        "poin": 5
+      }
+    },
+    "ip_k": [
+      90.78,
+      91.57,
+      93.54,
+      90.36,
+      94
+    ],
+    "bi_k": [
+      96.12,
+      94.01,
+      96.53,
+      98.49,
+      93
+    ],
+    "mtk_k": [
+      93.37,
+      90.76,
+      93.95,
+      97.02,
+      92
+    ],
+    "rata_k5": 93,
+    "tren": "Turun",
+    "kelas_labels": [
+      "Kelas 1",
+      "Kelas 2",
+      "Kelas 3",
+      "Kelas 4",
+      "Kelas 5"
+    ],
+    "kelas_akhir": "Kelas 5"
+  },
+  {
+    "id": "3141831536 / 2122005001033",
+    "nama": "MEIZA PUTRI KHAZNA",
+    "kelas_rows": {
+      "Kelas 1": {
+        "ipas": 99,
+        "bind": 98.33,
+        "mtk": 97.39,
+        "absensi": 94.1,
+        "rata": 98.24,
+        "poin": 0
+      },
+      "Kelas 2": {
+        "ipas": 98.16,
+        "bind": 99,
+        "mtk": 99,
+        "absensi": 98.2,
+        "rata": 98.72,
+        "poin": 0
+      },
+      "Kelas 3": {
+        "ipas": 96.16,
+        "bind": 99,
+        "mtk": 95.86,
+        "absensi": 98.1,
+        "rata": 97.01,
+        "poin": 5
+      },
+      "Kelas 4": {
+        "ipas": 93.94,
+        "bind": 99,
+        "mtk": 95.54,
+        "absensi": 93.3,
+        "rata": 96.16,
+        "poin": 0
+      },
+      "Kelas 5": {
+        "ipas": 97,
+        "bind": 95,
+        "mtk": 95,
+        "absensi": 93.6,
+        "rata": 95.67,
+        "poin": 0
+      }
+    },
+    "ip_k": [
+      99,
+      98.16,
+      96.16,
+      93.94,
+      97
+    ],
+    "bi_k": [
+      98.33,
+      99,
+      99,
+      99,
+      95
+    ],
+    "mtk_k": [
+      97.39,
+      99,
+      95.86,
+      95.54,
+      95
+    ],
+    "rata_k5": 95.67,
+    "tren": "Turun",
+    "kelas_labels": [
+      "Kelas 1",
+      "Kelas 2",
+      "Kelas 3",
+      "Kelas 4",
+      "Kelas 5"
+    ],
+    "kelas_akhir": "Kelas 5"
+  },
+  {
+    "id": "0146922787 / 24250050040042",
+    "nama": "MUHAMAD DIYANDRA PUTRA",
+    "kelas_rows": {
+      "Kelas 1": {
+        "ipas": 86.35,
+        "bind": 85.09,
+        "mtk": 88.85,
+        "absensi": 95.9,
+        "rata": 86.76,
+        "poin": 0
+      },
+      "Kelas 2": {
+        "ipas": 87.77,
+        "bind": 87.15,
+        "mtk": 87.67,
+        "absensi": 93.2,
+        "rata": 87.53,
+        "poin": 0
+      },
+      "Kelas 3": {
+        "ipas": 85.73,
+        "bind": 87.71,
+        "mtk": 91.54,
+        "absensi": 92.3,
+        "rata": 88.33,
+        "poin": 0
+      },
+      "Kelas 4": {
+        "ipas": 84.5,
+        "bind": 89.71,
+        "mtk": 91.03,
+        "absensi": 98.4,
+        "rata": 88.41,
+        "poin": 0
+      },
+      "Kelas 5": {
+        "ipas": 89,
+        "bind": 86.29,
+        "mtk": 86,
+        "absensi": 98.3,
+        "rata": 87.1,
+        "poin": 0
+      }
+    },
+    "ip_k": [
+      86.35,
+      87.77,
+      85.73,
+      84.5,
+      89
+    ],
+    "bi_k": [
+      85.09,
+      87.15,
+      87.71,
+      89.71,
+      86.29
+    ],
+    "mtk_k": [
+      88.85,
+      87.67,
+      91.54,
+      91.03,
+      86
+    ],
+    "rata_k5": 87.1,
+    "tren": "Turun",
+    "kelas_labels": [
+      "Kelas 1",
+      "Kelas 2",
+      "Kelas 3",
+      "Kelas 4",
+      "Kelas 5"
+    ],
+    "kelas_akhir": "Kelas 5"
+  },
+  {
+    "id": "3152754970 / 2122005001035",
+    "nama": "MUHAMMAD GIBRAN RAZAKA",
+    "kelas_rows": {
+      "Kelas 1": {
+        "ipas": 93.31,
+        "bind": 92.55,
+        "mtk": 95.92,
+        "absensi": 96.0,
+        "rata": 93.93,
+        "poin": 0
+      },
+      "Kelas 2": {
+        "ipas": 94.63,
+        "bind": 91.53,
+        "mtk": 94.62,
+        "absensi": 98.1,
+        "rata": 93.59,
+        "poin": 0
+      },
+      "Kelas 3": {
+        "ipas": 92.88,
+        "bind": 90.19,
+        "mtk": 93.89,
+        "absensi": 94.8,
+        "rata": 92.32,
+        "poin": 0
+      },
+      "Kelas 4": {
+        "ipas": 89.9,
+        "bind": 89.63,
+        "mtk": 97.41,
+        "absensi": 96.1,
+        "rata": 92.31,
+        "poin": 5
+      },
+      "Kelas 5": {
+        "ipas": 97,
+        "bind": 93,
+        "mtk": 96,
+        "absensi": 96.3,
+        "rata": 95.33,
+        "poin": 0
+      }
+    },
+    "ip_k": [
+      93.31,
+      94.63,
+      92.88,
+      89.9,
+      97
+    ],
+    "bi_k": [
+      92.55,
+      91.53,
+      90.19,
+      89.63,
+      93
+    ],
+    "mtk_k": [
+      95.92,
+      94.62,
+      93.89,
+      97.41,
+      96
+    ],
+    "rata_k5": 95.33,
+    "tren": "Naik",
+    "kelas_labels": [
+      "Kelas 1",
+      "Kelas 2",
+      "Kelas 3",
+      "Kelas 4",
+      "Kelas 5"
+    ],
+    "kelas_akhir": "Kelas 5"
+  },
+  {
+    "id": "3143014304 / 2324005003036",
+    "nama": "MUHAMMAD RAFKA WIBOWO",
+    "kelas_rows": {
+      "Kelas 1": {
+        "ipas": 86.51,
+        "bind": 83.5,
+        "mtk": 81.94,
+        "absensi": 98.3,
+        "rata": 83.98,
+        "poin": 0
+      },
+      "Kelas 2": {
+        "ipas": 85.6,
+        "bind": 83.15,
+        "mtk": 83.17,
+        "absensi": 96.1,
+        "rata": 83.97,
+        "poin": 0
+      },
+      "Kelas 3": {
+        "ipas": 88.8,
+        "bind": 84.8,
+        "mtk": 84.44,
+        "absensi": 94.0,
+        "rata": 86.01,
+        "poin": 0
+      },
+      "Kelas 4": {
+        "ipas": 89.75,
+        "bind": 81.95,
+        "mtk": 88.06,
+        "absensi": 92.8,
+        "rata": 86.59,
+        "poin": 0
+      },
+      "Kelas 5": {
+        "ipas": 86.67,
+        "bind": 87,
+        "mtk": 84,
+        "absensi": 97.6,
+        "rata": 85.89,
+        "poin": 0
+      }
+    },
+    "ip_k": [
+      86.51,
+      85.6,
+      88.8,
+      89.75,
+      86.67
+    ],
+    "bi_k": [
+      83.5,
+      83.15,
+      84.8,
+      81.95,
+      87
+    ],
+    "mtk_k": [
+      81.94,
+      83.17,
+      84.44,
+      88.06,
+      84
+    ],
+    "rata_k5": 85.89,
+    "tren": "Turun",
+    "kelas_labels": [
+      "Kelas 1",
+      "Kelas 2",
+      "Kelas 3",
+      "Kelas 4",
+      "Kelas 5"
+    ],
+    "kelas_akhir": "Kelas 5"
+  },
+  {
+    "id": "3144696779 / 2324005003037",
+    "nama": "MUHAMMAD RIFKI WIBOWO",
+    "kelas_rows": {
+      "Kelas 1": {
+        "ipas": 82.54,
+        "bind": 91.39,
+        "mtk": 84.7,
+        "absensi": 96.5,
+        "rata": 86.21,
+        "poin": 0
+      },
+      "Kelas 2": {
+        "ipas": 83.28,
+        "bind": 92.7,
+        "mtk": 83.89,
+        "absensi": 95.4,
+        "rata": 86.62,
+        "poin": 0
+      },
+      "Kelas 3": {
+        "ipas": 84.44,
+        "bind": 95.45,
+        "mtk": 86.77,
+        "absensi": 98.2,
+        "rata": 88.89,
+        "poin": 0
+      },
+      "Kelas 4": {
+        "ipas": 82.19,
+        "bind": 97.58,
+        "mtk": 88.34,
+        "absensi": 94.5,
+        "rata": 89.37,
+        "poin": 0
+      },
+      "Kelas 5": {
+        "ipas": 86.22,
+        "bind": 88,
+        "mtk": 84,
+        "absensi": 98.4,
+        "rata": 86.07,
+        "poin": 0
+      }
+    },
+    "ip_k": [
+      82.54,
+      83.28,
+      84.44,
+      82.19,
+      86.22
+    ],
+    "bi_k": [
+      91.39,
+      92.7,
+      95.45,
+      97.58,
+      88
+    ],
+    "mtk_k": [
+      84.7,
+      83.89,
+      86.77,
+      88.34,
+      84
+    ],
+    "rata_k5": 86.07,
+    "tren": "Turun",
+    "kelas_labels": [
+      "Kelas 1",
+      "Kelas 2",
+      "Kelas 3",
+      "Kelas 4",
+      "Kelas 5"
+    ],
+    "kelas_akhir": "Kelas 5"
+  },
+  {
+    "id": "3140639414 / 2122005001036",
+    "nama": "NABILA ZAHRA RATIFA",
+    "kelas_rows": {
+      "Kelas 1": {
+        "ipas": 94.93,
+        "bind": 96.5,
+        "mtk": 97.01,
+        "absensi": 99.2,
+        "rata": 96.15,
+        "poin": 0
+      },
+      "Kelas 2": {
+        "ipas": 95.91,
+        "bind": 97.82,
+        "mtk": 97.04,
+        "absensi": 98.0,
+        "rata": 96.92,
+        "poin": 0
+      },
+      "Kelas 3": {
+        "ipas": 98.64,
+        "bind": 99,
+        "mtk": 96.84,
+        "absensi": 93.8,
+        "rata": 98.16,
+        "poin": 0
+      },
+      "Kelas 4": {
+        "ipas": 99,
+        "bind": 99,
+        "mtk": 97.01,
+        "absensi": 95.7,
+        "rata": 98.34,
+        "poin": 0
+      },
+      "Kelas 5": {
+        "ipas": 98,
+        "bind": 96.75,
+        "mtk": 97,
+        "absensi": 92.5,
+        "rata": 97.25,
+        "poin": 0
+      }
+    },
+    "ip_k": [
+      94.93,
+      95.91,
+      98.64,
+      99,
+      98
+    ],
+    "bi_k": [
+      96.5,
+      97.82,
+      99,
+      99,
+      96.75
+    ],
+    "mtk_k": [
+      97.01,
+      97.04,
+      96.84,
+      97.01,
+      97
+    ],
+    "rata_k5": 97.25,
+    "tren": "Turun",
+    "kelas_labels": [
+      "Kelas 1",
+      "Kelas 2",
+      "Kelas 3",
+      "Kelas 4",
+      "Kelas 5"
+    ],
+    "kelas_akhir": "Kelas 5"
+  },
+  {
+    "id": "3143964206 / 2122005001037",
+    "nama": "NAFISA AZ-ZAHRA KURNIAWAN",
+    "kelas_rows": {
+      "Kelas 1": {
+        "ipas": 90.9,
+        "bind": 89.74,
+        "mtk": 89.09,
+        "absensi": 94.8,
+        "rata": 89.91,
+        "poin": 0
+      },
+      "Kelas 2": {
+        "ipas": 88.89,
+        "bind": 88.02,
+        "mtk": 88.49,
+        "absensi": 95.0,
+        "rata": 88.47,
+        "poin": 0
+      },
+      "Kelas 3": {
+        "ipas": 85.36,
+        "bind": 90.35,
+        "mtk": 87.61,
+        "absensi": 97.4,
+        "rata": 87.77,
+        "poin": 5
+      },
+      "Kelas 4": {
+        "ipas": 81.52,
+        "bind": 93.01,
+        "mtk": 88.22,
+        "absensi": 94.6,
+        "rata": 87.58,
+        "poin": 10
+      },
+      "Kelas 5": {
+        "ipas": 93,
+        "bind": 91,
+        "mtk": 89,
+        "absensi": 94.1,
+        "rata": 91,
+        "poin": 0
+      }
+    },
+    "ip_k": [
+      90.9,
+      88.89,
+      85.36,
+      81.52,
+      93
+    ],
+    "bi_k": [
+      89.74,
+      88.02,
+      90.35,
+      93.01,
+      91
+    ],
+    "mtk_k": [
+      89.09,
+      88.49,
+      87.61,
+      88.22,
+      89
+    ],
+    "rata_k5": 91,
+    "tren": "Naik",
+    "kelas_labels": [
+      "Kelas 1",
+      "Kelas 2",
+      "Kelas 3",
+      "Kelas 4",
+      "Kelas 5"
+    ],
+    "kelas_akhir": "Kelas 5"
+  },
+  {
+    "id": "0141839619 / 2122005001038",
+    "nama": "NAILA MUAZARA ULFA",
+    "kelas_rows": {
+      "Kelas 1": {
+        "ipas": 97.24,
+        "bind": 94.35,
+        "mtk": 92.07,
+        "absensi": 96.7,
+        "rata": 94.55,
+        "poin": 0
+      },
+      "Kelas 2": {
+        "ipas": 97.4,
+        "bind": 93.68,
+        "mtk": 93.25,
+        "absensi": 97.8,
+        "rata": 94.78,
+        "poin": 0
+      },
+      "Kelas 3": {
+        "ipas": 99,
+        "bind": 96.62,
+        "mtk": 97.1,
+        "absensi": 95.7,
+        "rata": 97.57,
+        "poin": 5
+      },
+      "Kelas 4": {
+        "ipas": 99,
+        "bind": 97.76,
+        "mtk": 93.77,
+        "absensi": 94.2,
+        "rata": 96.84,
+        "poin": 5
+      },
+      "Kelas 5": {
+        "ipas": 95,
+        "bind": 92,
+        "mtk": 92,
+        "absensi": 93.3,
+        "rata": 93,
+        "poin": 0
+      }
+    },
+    "ip_k": [
+      97.24,
+      97.4,
+      99,
+      99,
+      95
+    ],
+    "bi_k": [
+      94.35,
+      93.68,
+      96.62,
+      97.76,
+      92
+    ],
+    "mtk_k": [
+      92.07,
+      93.25,
+      97.1,
+      93.77,
+      92
+    ],
+    "rata_k5": 93,
+    "tren": "Turun",
+    "kelas_labels": [
+      "Kelas 1",
+      "Kelas 2",
+      "Kelas 3",
+      "Kelas 4",
+      "Kelas 5"
+    ],
+    "kelas_akhir": "Kelas 5"
+  },
+  {
+    "id": "3147972643 / 2122005001039",
+    "nama": "RAFFASYA RASENDRYA DABIR",
+    "kelas_rows": {
+      "Kelas 1": {
+        "ipas": 96.29,
+        "bind": 96.68,
+        "mtk": 95.37,
+        "absensi": 95.5,
+        "rata": 96.11,
+        "poin": 5
+      },
+      "Kelas 2": {
+        "ipas": 96.03,
+        "bind": 98.69,
+        "mtk": 95.16,
+        "absensi": 97.5,
+        "rata": 96.63,
+        "poin": 0
+      },
+      "Kelas 3": {
+        "ipas": 99,
+        "bind": 96.76,
+        "mtk": 91.71,
+        "absensi": 98.7,
+        "rata": 95.82,
+        "poin": 0
+      },
+      "Kelas 4": {
+        "ipas": 95.25,
+        "bind": 94.99,
+        "mtk": 94.42,
+        "absensi": 95.7,
+        "rata": 94.89,
+        "poin": 0
+      },
+      "Kelas 5": {
+        "ipas": 98,
+        "bind": 97,
+        "mtk": 97,
+        "absensi": 95.3,
+        "rata": 97.33,
+        "poin": 0
+      }
+    },
+    "ip_k": [
+      96.29,
+      96.03,
+      99,
+      95.25,
+      98
+    ],
+    "bi_k": [
+      96.68,
+      98.69,
+      96.76,
+      94.99,
+      97
+    ],
+    "mtk_k": [
+      95.37,
+      95.16,
+      91.71,
+      94.42,
+      97
+    ],
+    "rata_k5": 97.33,
+    "tren": "Naik",
+    "kelas_labels": [
+      "Kelas 1",
+      "Kelas 2",
+      "Kelas 3",
+      "Kelas 4",
+      "Kelas 5"
+    ],
+    "kelas_akhir": "Kelas 5"
+  },
+  {
+    "id": "0145218649 / 2122005001040",
+    "nama": "RAISA KANZHA SALSABILA",
+    "kelas_rows": {
+      "Kelas 1": {
+        "ipas": 99,
+        "bind": 97.76,
+        "mtk": 95.08,
+        "absensi": 94.9,
+        "rata": 97.28,
+        "poin": 0
+      },
+      "Kelas 2": {
+        "ipas": 99,
+        "bind": 95.45,
+        "mtk": 97.32,
+        "absensi": 98.8,
+        "rata": 97.26,
+        "poin": 0
+      },
+      "Kelas 3": {
+        "ipas": 95.19,
+        "bind": 94.13,
+        "mtk": 98.74,
+        "absensi": 98.7,
+        "rata": 96.02,
+        "poin": 0
+      },
+      "Kelas 4": {
+        "ipas": 96.91,
+        "bind": 91.16,
+        "mtk": 99,
+        "absensi": 95.7,
+        "rata": 95.69,
+        "poin": 0
+      },
+      "Kelas 5": {
+        "ipas": 98,
+        "bind": 98,
+        "mtk": 97.4,
+        "absensi": 97.4,
+        "rata": 97.8,
+        "poin": 5
+      }
+    },
+    "ip_k": [
+      99,
+      99,
+      95.19,
+      96.91,
+      98
+    ],
+    "bi_k": [
+      97.76,
+      95.45,
+      94.13,
+      91.16,
+      98
+    ],
+    "mtk_k": [
+      95.08,
+      97.32,
+      98.74,
+      99,
+      97.4
+    ],
+    "rata_k5": 97.8,
+    "tren": "Naik",
+    "kelas_labels": [
+      "Kelas 1",
+      "Kelas 2",
+      "Kelas 3",
+      "Kelas 4",
+      "Kelas 5"
+    ],
+    "kelas_akhir": "Kelas 5"
+  }
+]

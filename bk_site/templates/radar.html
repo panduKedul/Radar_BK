@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Dashboard Radar ({{ rows[0].kelas_akhir if rows else "" }})</h1>
+<div class="table-wrap">
+<table>
+<tr><th>Nama</th><th>Rata</th><th>Absensi</th><th>Poin</th><th>Tren</th><th>Risiko</th><th>Alasan</th><th></th></tr>
+{% for r in rows %}
+<tr>
+<td>{{ r.nama }}</td>
+<td>{{ r.kelas_rows[r.kelas_akhir].rata }}</td>
+<td>{{ "%.1f"|format(r.kelas_rows[r.kelas_akhir].absensi) }}%</td>
+<td>{{ r.kelas_rows[r.kelas_akhir].poin }}</td>
+<td>{{ r.tren }}</td>
+<td><span class="badge {{ r.risk.badge|lower }}">{{ r.risk.badge }} ({{ r.risk.skor }})</span></td>
+<td>{{ r.risk.alasan|join("; ") }}</td>
+<td><a href="/siswa/{{ r.id }}">profil</a></td>
+</tr>
+{% endfor %}
+</table>
+</div>
+{% endblock %}

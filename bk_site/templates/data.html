@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Data</h1>
+<p>Dataset aktif: <b>{{ active }}</b></p>
+{% for e in errors %}<p class="err">{{ e }}</p>{% endfor %}
+<form method="post" action="/data" enctype="multipart/form-data">
+<input type="file" name="file" accept=".xlsx">
+<button>Unggah &amp; validasi</button></form>
+<p><a href="/template">Unduh template kosong</a></p>
+<h2>Tersedia</h2>
+<ul>{% for f in files %}<li>{{ f }}{% if f == active %} (aktif){% else %}
+<form method="post" action="/data/aktifkan" style="display:inline">
+<input type="hidden" name="file" value="{{ f }}"><button>Jadikan aktif</button></form>
+<form method="post" action="/data/hapus" style="display:inline" onsubmit="return confirm('Hapus {{ f }}?')">
+<input type="hidden" name="file" value="{{ f }}"><button>Hapus</button></form>{% endif %}</li>{% endfor %}</ul>
+{% endblock %}

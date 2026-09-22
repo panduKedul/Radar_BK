@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<p><a class="btn btn-back" href="/radar">&larr; Kembali ke Radar</a></p>
+<h1>{{ s.nama }}</h1>
+<p class="note">ID: {{ s.id }}</p>
+<div class="stat">{{ s.kelas_akhir }}: rata {{ s.kelas_rows[s.kelas_akhir].rata }}, absensi {{ "%.1f"|format(s.kelas_rows[s.kelas_akhir].absensi) }}%,
+poin {{ s.kelas_rows[s.kelas_akhir].poin }}, tren {{ s.tren }}</div>
+<p><span class="badge {{ risk.badge|lower }}">{{ risk.badge }} ({{ risk.skor }})</span> — {{ risk.alasan|join("; ") }}</p>
+<h2>Rekomendasi BK</h2>
+<ul class="clean">{% for r in rekom %}<li>{{ r }}</li>{% endfor %}</ul>
+<div class="chart-box"><canvas id="g"></canvas></div>
+<script>
+new Chart(document.getElementById("g"), {type: "line",
+data: {labels: {{ labels|tojson }},
+datasets: [
+{label: "IPAS", data: {{ s.ip_k }}},
+{label: "B.Indonesia", data: {{ s.bi_k }}},
+{label: "Matematika", data: {{ s.mtk_k }}}
+]}, options: {responsive: true, maintainAspectRatio: false}});
+</script>
+<h2>Nilai per kelas</h2>
+<div class="table-wrap">
+<table>
+<tr><th></th>{% for lb in labels %}<th>{{ lb }}</th>{% endfor %}</tr>
+<tr><th>IPAS</th>{% for v in s.ip_k %}<td>{{ v }}</td>{% endfor %}</tr>
+<tr><th>B.Ind</th>{% for v in s.bi_k %}<td>{{ v }}</td>{% endfor %}</tr>
+<tr><th>MTK</th>{% for v in s.mtk_k %}<td>{{ v }}</td>{% endfor %}</tr>
+</table>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radar BK Kelas 5</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header class="nav"><div class="nav-inner">
+<a class="brand" href="/">Radar BK</a>
+<input type="checkbox" id="nav-toggle">
+<label class="nav-burger" for="nav-toggle">&#9776;</label>
+<nav class="nav-links">
+<a href="/">Beranda</a><a href="/radar">Radar</a><a href="/tren">Tren</a>
+<a href="/kasus">Kasus</a><a href="/sosiometri">Sosiometri</a><a href="/tanya">Tanya</a><a href="/data">Data</a>
+</nav>
+</div></header>
+<main>{% block content %}{% endblock %}</main>
+<footer class="footer"><div class="footer-inner">
+<p class="footer-title">Radar BK &mdash; Sistem Pendukung Keputusan Bimbingan Konseling</p>
+<p class="footer-meta">Muhammad Pandu Wirakusuma &middot; Telkom University Jakarta &middot; &copy; 2026</p>
+</div></footer>
+</body>
+</html>

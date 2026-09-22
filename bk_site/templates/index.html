@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="hero">
+<h1>RADAR BK</h1>
+<p>Baca sinyal siswa sejak dini — satu radar untuk absensi, nilai, poin, dan tren.</p>
+</div>
+<div class="stat">{{ n }} siswa terpantau, <b>{{ n_int }}</b> butuh intervensi.</div>
+<div class="cards">
+<a class="card" href="/radar">Dashboard Radar</a>
+<a class="card" href="/tren">Tren Nilai</a>
+<a class="card" href="/kasus">Status Kasus</a>
+<a class="card" href="/sosiometri">Sosiometri</a>
+<a class="card" href="/data">Data</a>
+</div>
+<p class="note">Data tugas-telat &amp; kunjungan UKS belum tersedia di dataset.</p>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Tanya Rekomendasi</h1>
+<p class="note">Jawaban rule-based dari data radar (offline, tanpa AI luar). Riwayat sementara, hilang saat server restart.</p>
+<form method="post" action="/tanya">
+<label>Pertanyaan <input name="q" maxlength="300" size="50" placeholder="mis. siapa intervensi" required></label>
+<button type="submit">Tanya</button>
+</form>
+<form method="post" action="/tanya/reset" style="margin-top:.5em">
+<button type="submit" class="btn-back">Reset riwayat</button>
+</form>
+<p class="note">Ketik "bantuan" untuk daftar hal yang bisa ditanyakan. Misal: ringkasan kelas &middot; absensi terendah &middot; 3 nilai terendah &middot; tren naik &middot; rekomendasi per nama.</p>
+<div class="chat">
+{% for m in riwayat|reverse %}
+<div class="bubble q">{{ m.q }}</div>
+<div class="bubble a">{{ m.a | replace("\n", "<br>") | safe }}</div>
+{% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+# deps & build
+node_modules/
+dist/
+build/
+radar-bk-react/dist/
+radar-bk-react/node_modules/
+
+# python
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# uploads (dataset user, jangan push isi)
+bk_site/uploads/*
+!bk_site/uploads/.gitkeep
+
+# tunnel & sdd logs
+.superpowers/
+C:\Users\pandu\AppData\Local\Temp\opencode\radar_tunnel\
+*.out
+*.err
+
+# OS
+Thumbs.db
+.DS_Store

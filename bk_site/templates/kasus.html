@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Status Kasus</h1>
+<p class="note">Status tersimpan otomatis di perangkat ini.</p>
+<div class="table-wrap">
+<table>
+<tr><th>Nama</th><th>Risiko</th><th>Status</th><th>Ubah</th></tr>
+{% for r in rows %}
+<tr>
+<td>{{ r.nama }}</td>
+<td><span class="badge {{ r.risk.badge|lower }}">{{ r.risk.badge }}</span></td>
+<td>{{ r.status }}</td>
+<td><form class="inline" method="post" action="/kasus">
+<input type="hidden" name="id" value="{{ r.id }}">
+<select name="status">{% for c in choices %}<option value="{{ c }}"{% if c == r.status %} selected{% endif %}>{{ c }}</option>{% endfor %}</select>
+<button>Simpan</button></form></td>
+</tr>
+{% endfor %}
+</table>
+</div>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Sosiometri</h1>
+<p class="note">Tiap siswa pilih 3 teman <b>berbeda</b>, tak boleh pilih diri sendiri. Tersimpan otomatis di perangkat ini.</p>
+{% if err %}<p class="err">Pilihan tak sah: pemilih tak boleh sama dengan teman, dan 3 teman harus berbeda.</p>{% endif %}
+<form method="post" action="/sosiometri">
+<label>Pemilih: <select name="pemilih" id="pemilih" onchange="location='/sosiometri?pemilih='+encodeURIComponent(this.value)">{% for s in students %}<option value="{{ s.id }}"{% if s.id == sel %} selected{% endif %}>{{ s.nama }}</option>{% endfor %}</select></label>
+{% set cur = submitted.get(sel, []) %}
+{% for i in [0,1,2] %}
+<label>Teman {{ i+1 }}: <select name="teman" class="teman">{% for s in students %}<option value="{{ s.id }}"{% if cur and s.id == cur[i] %} selected{% endif %}>{{ s.nama }}</option>{% endfor %}</select></label>
+{% endfor %}
+<button>{{ "Perbarui" if sel in submitted else "Kirim" }}</button></form>
+<script>
+function filterTeman() {
+  const pem = document.getElementById("pemilih").value;
+  const ts = [...document.querySelectorAll("select.teman")];
+  const chosen = ts.map(t => t.value);
+  ts.forEach((t, i) => {
+    [...t.options].forEach(o => {
+      o.disabled = (o.value === pem) || (chosen.includes(o.value) && o.value !== t.value);
+    });
+    if (t.selectedOptions[0].disabled) t.selectedIndex = [...t.options].findIndex(o => !o.disabled);
+  });
+}
+document.getElementById("pemilih").addEventListener("change", filterTeman);
+document.querySelectorAll("select.teman").forEach(t => t.addEventListener("change", filterTeman));
+filterTeman();
+</script>
+<h2>Sudah mengisi (klik untuk edit)</h2>
+<ul class="clean">{% for pid in submitted %}<li><a href="/sosiometri?pemilih={{ pid|urlencode }}">{{ names.get(pid, pid) }}</a></li>{% else %}<li>Belum ada.</li>{% endfor %}</ul>
+<h2>Bintang (terbanyak dipilih)</h2><ul class="clean">{% for nid, n in top %}<li>{{ names.get(nid, nid) }} — {{ n }} pilihan</li>{% else %}<li>Belum ada data.</li>{% endfor %}</ul>
+<h2>Terisolasi (tak dipilih)</h2>
+<ul class="clean">{% for nid in terisol %}<li>{{ names.get(nid, nid) }}</li>{% else %}<li>Tidak ada.</li>{% endfor %}</ul>
+{% endblock %}
