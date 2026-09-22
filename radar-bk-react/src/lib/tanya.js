@@ -56,11 +56,11 @@ const STOPNAMA = new Set([
   'indonesia', 'kelas', 'untuk', 'rekomendasi', 'kah', 'memiliki', 'dan', 'atau',
   'anak', 'siswa', 'data', 'berapa', 'tolong', 'lihat', 'tampilkan', 'guru',
   'bantuan', 'contoh', 'ringkasan', 'keseluruhan', 'semua', 'pantau', 'intervensi',
-  'rajin', 'terendah', 'tertinggi', 'terbaik', 'tanya', 'mohon', 'coba', 'ranking',
+  'rajin', 'terendah', 'tertinggi', 'terbaik', 'tanya', 'mohon', 'coba', 'ranking', 'semester',
 ])
 
 function _levelLabel(DATA, ql) {
-  const m = ql.match(/kelas\s*(\d+)/)
+  const m = ql.match(/(?:kelas|semester)\s*(\d+)/)
   if (!m || !DATA.students || !DATA.students.length) return null
   for (const lab of DATA.students[0].kelas_labels || []) {
     if (new RegExp('kelas\\s*' + m[1] + '\\b', 'i').test(lab)) return lab
@@ -87,9 +87,13 @@ function _candidateName(q0) {
   return null
 }
 
+function sem(label) {
+  return String(label ?? '').replace(/^Kelas/, 'Semester')
+}
+
 export const CONTOH =
   'Yang biasa ditanyakan ke saya:\n' +
-  "- Kondisi umum: 'ringkasan kelas', 'berapa intervensi'\n" +
+  "- Kondisi umum: 'ringkasan semester', 'berapa intervensi'\n" +
   "- Kehadiran: 'siapa absensi terendah', 'paling rajin siapa'\n" +
   "- Nilai: '3 nilai terendah', 'nilai tertinggi', 'mtk terendah'\n" +
   "- Tren: 'siapa trennya naik', 'tren turun siapa saja'\n" +
@@ -121,7 +125,7 @@ export function jawab(q, DATA) {
     ql.includes('paling atas') || ql.includes('rajin') || ql.includes('bagus') ||
     ql.includes('baik') || ql.includes('jago')
   const lvl = _levelLabel(DATA, ql) || akhir
-  const ql_n = ql.replace(/kelas\s*\d+/g, ' ')
+  const ql_n = ql.replace(/(?:kelas|semester)\s*\d+/g, ' ')
 
   // --- nama siswa didahulukan ---
   const [sn, rn] = _findStudent(ql, rows)
@@ -136,7 +140,7 @@ export function jawab(q, DATA) {
           ? 'Bagus, di atas 85 — pertahankan.'
           : 'Di bawah 85 — perlu bimbingan + pantau tugas 2 minggu.'
       return (
-        sn.nama + ' — ' + lvq + ': rata ' + _fmt(kl.rata) +
+        sn.nama + ' — ' + sem(lvq) + ': rata ' + _fmt(kl.rata) +
         ' (IPAS ' + _fmt(kl.ipas) + ', B. Indonesia ' + _fmt(kl.bind) +
         ', Matematika ' + _fmt(kl.mtk) + '), absensi ' +
         Number(kl.absensi || 0).toFixed(1) + '%, poin ' + (kl.poin || 0) + '. ' + saran
@@ -166,7 +170,7 @@ export function jawab(q, DATA) {
           ? 'Bagus, di atas 85 — pertahankan.'
           : 'Di bawah 85 — perlu bimbingan ' + label + ' + pantau tugas 2 minggu.'
       return sn.nama + ' — nilai ' + label + ': ' + trek + '. Terakhir (' +
-        (sn.kelas_akhir || akhir) + '): ' + _fmt(cur) + '. ' + saran
+        (sem(sn.kelas_akhir) || sem(akhir)) + '): ' + _fmt(cur) + '. ' + saran
     }
     if (ql.includes('tren') || ql.includes('naik') || ql.includes('turun')) {
       const t_all = sn.tren || '-'
@@ -184,8 +188,8 @@ export function jawab(q, DATA) {
   // --- nama mirip tapi tak di dataset ---
   const cand = _candidateName(q0)
   if (cand && !_findMapel(ql, true)) {
-    return 'Ups, sepertinya ' + cand + ' tidak berada di data/kelas ini. ' +
-      'Mohon pilih data kelas yang sesuai di menu Data, lalu tanya lagi ya.'
+      return 'Ups, sepertinya ' + cand + ' tidak berada di data/semester ini. ' +
+        'Mohon pilih data semester yang sesuai di menu Data, lalu tanya lagi ya.'
   }
 
   // --- mapel tertentu (kata utuh; tanpa nama) ---
@@ -221,7 +225,7 @@ export function jawab(q, DATA) {
     if (tinggi && !rendah) {
       const [s0, v0] = vals[0]
       return 'Paling rajin' + (lvl === akhir ? '' : ' ' + lvl) + ': ' + s0.nama +
-        ' (' + Number(v0).toFixed(1) + '%). Beri apresiasi biar konsisten, jadikan contoh di kelas.'
+        ' (' + Number(v0).toFixed(1) + '%). Beri apresiasi biar konsisten, jadikan contoh di semester.'
     }
     const n = _topN(ql_n)
     const pick = vals.slice(0, n)
@@ -240,7 +244,7 @@ export function jawab(q, DATA) {
       .sort((a, b) => b[1] - a[1])
     const top = vals.filter(([, v]) => v > 0)
     if (!top.length) {
-      return 'Alhamdulillah, nol pelanggaran tercatat. Iklim kelas sedang sehat — pertahankan.'
+      return 'Alhamdulillah, nol pelanggaran tercatat. Iklim semester sedang sehat — pertahankan.'
     }
     const n = _topN(ql)
     const pick = top.slice(0, n)
@@ -263,7 +267,7 @@ export function jawab(q, DATA) {
       })
       .sort((a, b) => a[1] - b[1])
     if (!vals.length) return 'Datanya kosong.'
-    const sebut = lvl === akhir ? '' : ' ' + lvl
+    const sebut = lvl === akhir ? '' : ' ' + sem(lvl)
     const m_rank = ql.match(/(?:ranking|rangking|peringkat|juara)\s*(\d+)?/)
     if (m_rank) {
       const ordered = [...vals].sort((a, b) => b[1] - a[1])
@@ -376,14 +380,14 @@ export function jawab(q, DATA) {
       (c.Pantau || 0) + ' Pantau, ' + (c.Aman || 0) + ' Aman. ' +
       (c.Intervensi
         ? 'Fokus minggu ini ke yang Intervensi dulu.'
-        : 'Kondisi kelas sehat, tinggal jaga yang Pantau.')
+        : 'Kondisi semester sehat, tinggal jaga yang Pantau.')
   }
-  if (ql.includes('rata-rata kelas') || ql.includes('rata2 kelas') || ql.includes('rata kelas')) {
+  if (ql.includes('rata-rata kelas') || ql.includes('rata2 kelas') || ql.includes('rata kelas') || ql.includes('rata-rata semester') || ql.includes('rata semester')) {
     const vals = (DATA.students || [])
       .map((s) => _kr(s, akhir).rata)
       .filter((v) => v != null)
     const avg = vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : 0
-    return 'Rata-rata kelas: ' + avg.toFixed(2) + ' dari ' + vals.length + ' siswa. ' +
+    return 'Rata-rata semester: ' + avg.toFixed(2) + ' dari ' + vals.length + ' siswa. ' +
       (avg >= 85
         ? 'Bagus, di atas 85.'
         : 'Di bawah 85 — perlu penguatan belajar kolektif, mungkin remedial massal mapel terlemah.')

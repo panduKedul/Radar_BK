@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { computeRisk } from '../lib/risk.js'
+import { sem, semShort } from '../lib/dataset.js'
 
 const BADGE_COLOR = { Aman: '#059669', Pantau: '#d97706', Intervensi: '#dc2626' }
 const LINE_SERIES = [
@@ -116,7 +117,7 @@ export function ClassLine({ students, labels }) {
       ctx.beginPath(); ctx.moveTo(pad.l, Y(v)); ctx.lineTo(W - pad.r, Y(v)); ctx.stroke()
       ctx.fillStyle = '#64748b'; ctx.fillText(v, 12, Y(v) + 4)
     }
-    labels.forEach((lb, i) => { ctx.fillStyle = '#334155'; ctx.fillText(lb.replace('Kelas ', 'K'), X(i) - 14, H - 10) })
+    labels.forEach((lb, i) => { ctx.fillStyle = '#334155'; ctx.fillText(semShort(lb), X(i) - 14, H - 10) })
     LINE_SERIES.forEach((sr) => {
       ctx.strokeStyle = sr.color; ctx.lineWidth = 3
       ctx.beginPath()
@@ -144,7 +145,7 @@ export function ClassLine({ students, labels }) {
     if (Math.abs(canvas._xs[best] - mx) < 40) {
       setTip({
         x: canvas._xs[best],
-        label: labels[best],
+        label: sem(labels[best]),
         vals: LINE_SERIES.map((sr) => ({ ...sr, v: avg(sr.key, best) })),
       })
     } else setTip(null)
@@ -152,7 +153,7 @@ export function ClassLine({ students, labels }) {
 
   return (
     <div className="relative rounded-2xl bg-white p-4 shadow">
-      <h2 className="mb-1 text-lg font-bold">Tren Rata Kelas K1 → K5</h2>
+      <h2 className="mb-1 text-lg font-bold">Tren Rata Semester {labels.length ? `${semShort(labels[0])} → ${semShort(labels[labels.length - 1])}` : ''}</h2>
       <p className="mb-2 text-sm text-slate-500">Rata-rata seluruh siswa per mapel tiap tingkat. Arahkan kursor ke titik untuk angka.</p>
       <canvas ref={ref} className="w-full cursor-crosshair" onMouseMove={onMove} onMouseLeave={() => setTip(null)} aria-label="Garis tren rata kelas" />
       {tip && (
@@ -193,7 +194,7 @@ export function StudentLine({ student, labels }) {
       ctx.beginPath(); ctx.moveTo(pad.l, Y(v)); ctx.lineTo(W - pad.r, Y(v)); ctx.stroke()
       ctx.fillStyle = '#64748b'; ctx.fillText(v, 12, Y(v) + 4)
     }
-    labels.forEach((lb, i) => { ctx.fillStyle = '#334155'; ctx.fillText(lb.replace('Kelas ', 'K'), X(i) - 14, H - 10) })
+    labels.forEach((lb, i) => { ctx.fillStyle = '#334155'; ctx.fillText(semShort(lb), X(i) - 14, H - 10) })
     series.forEach((sr) => {
       ctx.strokeStyle = sr.color; ctx.lineWidth = 3
       ctx.beginPath()
@@ -227,7 +228,7 @@ export function StudentLine({ student, labels }) {
     if (Math.abs(canvas._xs[best] - mx) < 40) {
       setTip({
         x: canvas._xs[best],
-        label: labels[best],
+        label: sem(labels[best]),
         vals: series.map((sr) => ({ ...sr, v: sr.arr[best] })),
       })
     } else setTip(null)

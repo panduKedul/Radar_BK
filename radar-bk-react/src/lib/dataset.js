@@ -4,6 +4,16 @@ import { loadDatasets } from './xlsx-validate.js'
 
 export const DATASET_EVENT = 'radar-dataset-changed'
 
+/** Display: 'Kelas 5' → 'Semester 5'. */
+export function sem(label) {
+  return String(label ?? '').replace(/^Kelas/, 'Semester')
+}
+
+/** Display pendek sumbu: 'Kelas 5' → 'S5'. */
+export function semShort(label) {
+  return String(label ?? '').replace(/^Kelas\s*/, 'S')
+}
+
 /** Dataset aktif: file pilihan di /data, fallback seed bawaan. */
 export function getActiveStudents() {
   try {

@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Badge from './Badge.jsx'
+import { sem } from '../lib/dataset.js'
 
 const BADGE_RANK = { Intervensi: 3, Pantau: 2, Aman: 1 }
 
@@ -20,7 +21,7 @@ function val(row, key) {
 
 const COLUMNS = [
   { key: 'nama', label: 'Nama' },
-  { key: null, label: 'Kelas Akhir' },
+  { key: null, label: 'Semester Akhir' },
   { key: 'absensi', label: 'Absensi' },
   { key: 'rata', label: 'Rata' },
   { key: 'poin', label: 'Poin' },
@@ -85,7 +86,7 @@ export default function RiskTable({ rows }) {
             return (
               <tr key={s.id} className="border-t hover:bg-slate-50">
                 <td className="px-3 py-2"><Link to={`/siswa/${encodeURIComponent(s.id)}`} className="font-medium text-indigo-700 hover:underline">{s.nama}</Link></td>
-                <td className="px-3 py-2">{s.kelas_akhir}</td>
+                <td className="px-3 py-2">{sem(s.kelas_akhir)}</td>
                 <td className="px-3 py-2">{kr.absensi ?? '-'}</td>
                 <td className="px-3 py-2">{kr.rata ?? '-'}</td>
                 <td className="px-3 py-2">{kr.poin ?? '-'}</td>

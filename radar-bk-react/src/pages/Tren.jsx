@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useDataset } from '../lib/dataset.js'
 import TrendChart from '../components/TrendChart.jsx'
 import { computeRisk } from '../lib/risk.js'
+import { semShort } from '../lib/dataset.js'
 
 export default function Tren() {
   const students = useDataset()
@@ -25,7 +26,7 @@ export default function Tren() {
       <h1 className="text-xl font-bold">Tren Nilai</h1>
       <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
         <div className="rounded-2xl bg-white p-4 shadow"><div className="text-sm text-slate-500">Siswa</div><div className="text-2xl font-bold">{rows.length}</div></div>
-        <div className="rounded-2xl bg-white p-4 shadow"><div className="text-sm text-slate-500">Rata kelas akhir</div><div className="text-2xl font-bold">{rataAkhir}</div></div>
+        <div className="rounded-2xl bg-white p-4 shadow"><div className="text-sm text-slate-500">Rata semester akhir</div><div className="text-2xl font-bold">{rataAkhir}</div></div>
         <div className="rounded-2xl bg-white p-4 shadow"><div className="text-sm text-slate-500">Tren Naik</div><div className="text-2xl font-bold text-emerald-600">{nNaik}</div></div>
         <div className="rounded-2xl bg-white p-4 shadow"><div className="text-sm text-slate-500">Tren Turun</div><div className="text-2xl font-bold text-red-600">{nTurun}</div></div>
       </div>
@@ -33,7 +34,7 @@ export default function Tren() {
       <div className="overflow-x-auto rounded-2xl bg-white shadow">
         <table className="w-full text-sm">
           <thead className="sticky top-0 bg-slate-100">
-            <tr><th className="p-2 text-left">Nama</th>{labels.map((lb) => <th key={lb} className="p-2">{lb.replace('Kelas ', 'K')}</th>)}<th className="p-2">Tren</th></tr>
+            <tr><th className="p-2 text-left">Nama</th>{labels.map((lb) => <th key={lb} className="p-2">{semShort(lb)}</th>)}<th className="p-2">Tren</th></tr>
           </thead>
           <tbody>
             {rows.map((r, idx) => (
@@ -47,7 +48,7 @@ export default function Tren() {
               </tr>
             ))}
             <tr className="bg-indigo-50 font-bold">
-              <td className="p-2">Rata kelas</td>
+              <td className="p-2">Rata semester</td>
               {labels.map((_, i) => <td key={i} className="p-2 text-center">{avgKelas(i)}</td>)}
               <td />
             </tr>

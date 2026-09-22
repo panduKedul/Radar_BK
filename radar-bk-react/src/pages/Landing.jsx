@@ -24,7 +24,7 @@ const CARDS = [
     icon: (<path d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M12 12a4 4 0 100-8 4 4 0 000 8zm6-3a3 3 0 11-2 2.82M6 9a3 3 0 102-2.82" />),
   },
   {
-    to: '/data', label: 'Data', desc: 'Upload & kelola dataset kelas',
+    to: '/data', label: 'Data', desc: 'Upload & kelola dataset',
     bg: 'bg-sky-50', ring: 'hover:ring-sky-300', iconBg: 'bg-sky-500',
     icon: (<path d="M4 7c0-1.1 3.6-2 8-2s8 .9 8 2-3.6 2-8 2-8-.9-8-2zm0 0v10c0 1.1 3.6 2 8 2s8-.9 8-2V7M4 12c0 1.1 3.6 2 8 2s8-.9 8-2" />),
   },
