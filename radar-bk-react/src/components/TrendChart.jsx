@@ -18,6 +18,7 @@ function setupCanvas(ref, h) {
   canvas.height = h * dpr
   canvas.style.height = h + 'px'
   const ctx = canvas.getContext('2d')
+  if (!ctx) return null
   ctx.scale(dpr, dpr)
   ctx.clearRect(0, 0, W, H_unused(h))
   return { ctx, W, H: h }

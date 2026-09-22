@@ -10,8 +10,11 @@ import NotFound from './NotFound.jsx'
 export default function Siswa() {
   const students = useDataset()
   const { id } = useParams()
-  const sid = decodeURIComponent(id || '')
-  const s = students.find((x) => x.id === sid)
+  let sid = id || ''
+  try {
+    sid = decodeURIComponent(sid)
+  } catch { /* biarkan mentah */ }
+  const s = students.find((x) => String(x.id) === String(sid))
   if (!s) return <NotFound />
   const risk = computeRisk(s)
   const rekom = rekomendasi(s, risk)

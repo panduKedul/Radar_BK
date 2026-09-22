@@ -39,7 +39,7 @@ export default function Tren() {
           <tbody>
             {rows.map((r, idx) => (
               <tr key={r.id} className={idx % 2 ? 'bg-slate-50' : ''}>
-                <td className="p-2"><Link className="text-indigo-600 hover:underline" to={`/siswa/${r.id}`}>{r.nama}</Link></td>
+                <td className="p-2"><Link className="text-indigo-600 hover:underline" to={`/siswa/${encodeURIComponent(r.id)}`}>{r.nama}</Link></td>
                 {labels.map((_, i) => {
                   const [a, b, c] = [(r.ip_k || [])[i], (r.bi_k || [])[i], (r.mtk_k || [])[i]]
                   return <td key={i} className="p-2 text-center">{a != null && b != null && c != null ? ((a + b + c) / 3).toFixed(1) : '-'}</td>
