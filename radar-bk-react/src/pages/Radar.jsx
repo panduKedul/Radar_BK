@@ -1,8 +1,9 @@
 import { computeRisk } from '../lib/risk.js'
-import students from '../data/students.json'
+import { useDataset } from '../lib/dataset.js'
 import RiskTable from '../components/RiskTable.jsx'
 
 export default function Radar() {
+  const students = useDataset()
   const rows = students.map((s) => ({ ...s, risk: computeRisk(s) })).sort((a, b) => b.risk.skor - a.risk.skor)
   return (
     <div>

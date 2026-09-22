@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import seed from '../data/students.json'
 import { saveState } from '../lib/store.js'
+import { notifyDatasetChanged } from '../lib/dataset.js'
 import {
   SEED_NAME,
   validateWorkbook,
@@ -23,6 +24,7 @@ export default function DataPage() {
   function persist(nextActive, nextFiles) {
     saveDatasets(nextActive, nextFiles)
     setLib({ active: nextActive, files: nextFiles })
+    notifyDatasetChanged()
   }
 
   function useActive(name, filesMap) {

@@ -21,7 +21,7 @@ export default function AdminLayout({ children }) {
   return (
     <div className="flex min-h-screen bg-[#f3f4f6]">
       {/* Sidebar desktop */}
-      <aside className="w-60 shrink-0 bg-[#1e2a3a] text-white p-4 hidden md:flex md:flex-col sticky top-0 h-screen overflow-y-auto">
+      <aside className="w-60 shrink-0 bg-[#1e2a3a] text-white p-4 hidden md:flex md:flex-col">
         <div className="text-xl font-bold tracking-wide">RADAR BK</div>
         <p className="text-xs text-slate-300 mb-4">Sinyal dini siswa, cepat tanggap BK</p>
         <nav className="flex flex-col gap-1" aria-label="Navigasi utama">
@@ -42,7 +42,7 @@ export default function AdminLayout({ children }) {
       {/* Kolom kanan */}
       <div className="flex-1 flex flex-col min-w-0">
         {/* Header sticky + hamburger HP */}
-        <header className="sticky top-0 z-10 bg-[#1e2a3a] text-white px-4 py-3 flex items-center gap-3">
+        <header className="bg-[#1e2a3a] text-white px-4 py-3 flex items-center gap-3">
           <button
             className="md:hidden rounded border border-white/30 px-2 py-1 text-sm"
             onClick={() => setOpen((v) => !v)}
@@ -62,7 +62,7 @@ export default function AdminLayout({ children }) {
         {/* Nav HP dropdown */}
         {open && (
           <nav
-            className="md:hidden bg-[#1e2a3a] text-white px-4 pb-3 flex flex-col gap-1 sticky top-[57px] z-10 max-h-[60vh] overflow-y-auto"
+            className="md:hidden bg-[#1e2a3a] text-white px-4 pb-3 flex flex-col gap-1"
             aria-label="Navigasi seluler"
           >
             {NAV.map((n) => (

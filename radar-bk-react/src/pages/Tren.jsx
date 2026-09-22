@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom'
-import students from '../data/students.json'
+import { useDataset } from '../lib/dataset.js'
 import TrendChart from '../components/TrendChart.jsx'
 import { computeRisk } from '../lib/risk.js'
 
 export default function Tren() {
+  const students = useDataset()
   const labels = students.length ? students[0].kelas_labels : []
   const rows = students.map((s) => ({ ...s, risk: computeRisk(s) }))
   const nNaik = rows.filter((r) => r.tren === 'Naik').length

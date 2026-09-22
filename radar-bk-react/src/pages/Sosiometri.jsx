@@ -1,13 +1,18 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { loadState, saveState } from '../lib/store.js'
-import students from '../data/students.json'
+import { useDataset } from '../lib/dataset.js'
 import SosioForm from '../components/SosioForm.jsx'
 
 export default function Sosiometri() {
+  const students = useDataset()
   const [state, setState] = useState(() => loadState())
-  const [pemilih, setPemilih] = useState(students[0]?.id || '')
+  const [pemilih, setPemilih] = useState('')
 
-  const names = useMemo(() => Object.fromEntries(students.map((s) => [s.id, s.nama])), [])
+  useEffect(() => {
+    if (!pemilih && students.length) setPemilih(students[0].id)
+  }, [pemilih, students])
+
+  const names = useMemo(() => Object.fromEntries(students.map((s) => [s.id, s.nama])), [students])
 
   const { top5, terisol } = useMemo(() => {
     const counts = {}
@@ -19,7 +24,7 @@ export default function Sosiometri() {
       .slice(0, 5)
     const terisol = students.map((s) => s.id).filter((id) => !counts[id])
     return { top5, terisol }
-  }, [state.sosio])
+  }, [state.sosio, students])
 
   function handleSave(id, teman) {
     const next = { ...state.sosio, [id]: teman }

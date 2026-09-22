@@ -1,11 +1,12 @@
 import { Link, useParams } from 'react-router-dom'
 import { computeRisk } from '../lib/risk.js'
 import { rekomendasi } from '../lib/rekom.js'
-import students from '../data/students.json'
+import { useDataset } from '../lib/dataset.js'
 import Badge from '../components/Badge.jsx'
 import NotFound from './NotFound.jsx'
 
 export default function Siswa() {
+  const students = useDataset()
   const { id } = useParams()
   const sid = decodeURIComponent(id || '')
   const s = students.find((x) => x.id === sid)

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { computeRisk } from '../lib/risk.js'
-import students from '../data/students.json'
+import { useDataset } from '../lib/dataset.js'
 
 const CARDS = [
   { to: '/radar', label: 'Radar', desc: 'Papan risiko siswa' },
@@ -12,6 +12,7 @@ const CARDS = [
 ]
 
 export default function Landing() {
+  const students = useDataset()
   const rows = students.map((s) => ({ ...s, risk: computeRisk(s) }))
   const n = rows.length
   const n_int = rows.filter((r) => r.risk.badge === 'Intervensi').length

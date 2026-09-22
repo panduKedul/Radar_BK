@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import { computeRisk } from '../lib/risk.js'
 import { loadState, saveState, STATUS_CHOICES } from '../lib/store.js'
-import students from '../data/students.json'
+import { useDataset } from '../lib/dataset.js'
 import Badge from '../components/Badge.jsx'
 
 export default function Kasus() {
+  const students = useDataset()
   const [state, setState] = useState(() => loadState())
 
   const rows = students
