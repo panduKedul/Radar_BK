@@ -154,6 +154,64 @@ export function ClassLine({ students, labels }) {
   )
 }
 
+export function StudentLine({ student, labels }) {
+  const ref = useRef(null)
+  const series = [
+    { label: 'IPAS', color: '#4f46e5', arr: student.ip_k || [] },
+    { label: 'B. Indonesia', color: '#059669', arr: student.bi_k || [] },
+    { label: 'Matematika', color: '#d97706', arr: student.mtk_k || [] },
+  ]
+  useEffect(() => {
+    const got = setupCanvas(ref, 300)
+    if (!got) return
+    const { ctx, W, H } = got
+    const pad = { l: 44, r: 12, t: 16, b: 36 }
+    const X = (i) => pad.l + (i * (W - pad.l - pad.r)) / Math.max(labels.length - 1, 1)
+    const Y = (v) => pad.t + (1 - v / 100) * (H - pad.t - pad.b)
+    ctx.font = '12px system-ui'
+    for (let v = 0; v <= 100; v += 20) {
+      ctx.strokeStyle = '#e2e8f0'
+      ctx.beginPath(); ctx.moveTo(pad.l, Y(v)); ctx.lineTo(W - pad.r, Y(v)); ctx.stroke()
+      ctx.fillStyle = '#64748b'; ctx.fillText(v, 12, Y(v) + 4)
+    }
+    labels.forEach((lb, i) => { ctx.fillStyle = '#334155'; ctx.fillText(lb.replace('Kelas ', 'K'), X(i) - 14, H - 10) })
+    series.forEach((sr) => {
+      ctx.strokeStyle = sr.color; ctx.lineWidth = 3
+      ctx.beginPath()
+      let started = false
+      labels.forEach((_, i) => {
+        const v = sr.arr[i]
+        if (v == null) return
+        if (!started) { ctx.moveTo(X(i), Y(v)); started = true } else ctx.lineTo(X(i), Y(v))
+      })
+      ctx.stroke()
+      ctx.lineWidth = 1
+      labels.forEach((_, i) => {
+        const v = sr.arr[i]
+        if (v == null) return
+        ctx.fillStyle = sr.color
+        ctx.beginPath(); ctx.arc(X(i), Y(v), 5, 0, Math.PI * 2); ctx.fill()
+        ctx.fillStyle = '#fff'
+        ctx.beginPath(); ctx.arc(X(i), Y(v), 2, 0, Math.PI * 2); ctx.fill()
+        ctx.fillStyle = '#334155'
+        ctx.fillText(v, X(i) - 10, Y(v) - 10)
+      })
+    })
+  }, [student, labels])
+  return (
+    <div className="rounded-xl bg-white p-4 shadow">
+      <h2 className="mb-1 font-semibold">Grafik Nilai {student.nama}</h2>
+      <p className="mb-2 text-sm text-slate-500">Per mapel tiap tingkat — naik/turun kelihatan langsung.</p>
+      <canvas ref={ref} className="w-full" aria-label={`Grafik nilai ${student.nama}`} />
+      <div className="mt-2 flex gap-4 text-xs text-slate-600">
+        {series.map((s) => (
+          <span key={s.label}><i className="mr-1 inline-block h-3 w-3 rounded-full" style={{ background: s.color }} />{s.label}</span>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export default function TrendChart({ students, labels }) {
   return (
     <div className="grid gap-4">

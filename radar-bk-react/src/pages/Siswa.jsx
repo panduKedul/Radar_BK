@@ -3,6 +3,7 @@ import { computeRisk } from '../lib/risk.js'
 import { rekomendasi } from '../lib/rekom.js'
 import { useDataset } from '../lib/dataset.js'
 import Badge from '../components/Badge.jsx'
+import { StudentLine } from '../components/TrendChart.jsx'
 import NotFound from './NotFound.jsx'
 
 export default function Siswa() {
@@ -30,6 +31,9 @@ export default function Siswa() {
         <ul className="list-disc pl-5 text-sm">
           {rekom.map((r, i) => <li key={i}>{r}</li>)}
         </ul>
+      </div>
+      <div className="mt-4">
+        <StudentLine student={s} labels={s.kelas_labels || []} />
       </div>
     </div>
   )
