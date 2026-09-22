@@ -1,7 +1,7 @@
 [build]
   base = "radar-bk-react"
   command = "npm run build"
-  publish = "radar-bk-react/dist"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20"
